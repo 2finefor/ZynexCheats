@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 54 | Scripts: 6 | Modules: 0
+-- Instances: 75 | Scripts: 10 | Modules: 0
 local G2L = {};
 
 -- StarterGui.MyLibrary
@@ -17,6 +17,7 @@ G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 -- StarterGui.MyLibrary.Main
 G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Active"] = true;
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
 G2L["2"]["Size"] = UDim2.new(0, 400, 0, 400);
@@ -92,11 +93,11 @@ G2L["a"]["TextColor3"] = Color3.fromRGB(255, 250, 250);
 G2L["a"]["BackgroundTransparency"] = 1;
 G2L["a"]["Size"] = UDim2.new(0, 176, 0, 35);
 G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[Xanta]];
+G2L["a"]["Text"] = [[]];
 G2L["a"]["Name"] = [[Title]];
 G2L["a"]["Position"] = UDim2.new(0, 0, 0.07317, 0);
 
--- StarterGui.MyLibrary.Main.Topbar.Title.TextLabel
+-- StarterGui.MyLibrary.Main.Topbar.Title.VersionPaid
 G2L["b"] = Instance.new("TextLabel", G2L["a"]);
 G2L["b"]["TextWrapped"] = true;
 G2L["b"]["BorderSizePixel"] = 0;
@@ -108,8 +109,9 @@ G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b"]["BackgroundTransparency"] = 1;
 G2L["b"]["Size"] = UDim2.new(0, 111, 0, 19);
 G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Text"] = [[- V1.0]];
-G2L["b"]["Position"] = UDim2.new(0.60795, 0, 0.22857, 0);
+G2L["b"]["Text"] = [[-     V1.12   PAID]];
+G2L["b"]["Name"] = [[VersionPaid]];
+G2L["b"]["Position"] = UDim2.new(0.75568, 0, 0.22857, 0);
 
 -- StarterGui.MyLibrary.Main.Navigation
 G2L["c"] = Instance.new("Frame", G2L["2"]);
@@ -146,7 +148,7 @@ G2L["f"]["Name"] = [[ToggleAimbotTab]];
 -- StarterGui.MyLibrary.Main.Navigation.Aimbot.Sound
 G2L["10"] = Instance.new("Sound", G2L["d"]);
 G2L["10"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["10"]["SoundId"] = [[rbxassetid://8432836186]];
+G2L["10"]["SoundId"] = [[rbxassetid://7107162229]];
 
 -- StarterGui.MyLibrary.Main.Navigation.Visuals
 G2L["11"] = Instance.new("TextButton", G2L["c"]);
@@ -173,7 +175,7 @@ G2L["13"]["Name"] = [[ToggleVisualsTab]];
 -- StarterGui.MyLibrary.Main.Navigation.Visuals.Sound
 G2L["14"] = Instance.new("Sound", G2L["11"]);
 G2L["14"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["14"]["SoundId"] = [[rbxassetid://8432836186]];
+G2L["14"]["SoundId"] = [[rbxassetid://7107162229]];
 
 -- StarterGui.MyLibrary.Main.Navigation.Credits
 G2L["15"] = Instance.new("TextButton", G2L["c"]);
@@ -200,7 +202,7 @@ G2L["17"]["Name"] = [[ToggleCreditsTab]];
 -- StarterGui.MyLibrary.Main.Navigation.Credits.Sound
 G2L["18"] = Instance.new("Sound", G2L["15"]);
 G2L["18"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["18"]["SoundId"] = [[rbxassetid://8432836186]];
+G2L["18"]["SoundId"] = [[rbxassetid://7107162229]];
 
 -- StarterGui.MyLibrary.Main.Navigation.Frame
 G2L["19"] = Instance.new("Frame", G2L["c"]);
@@ -212,6 +214,8 @@ G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 -- StarterGui.MyLibrary.Main.ContentContainer
 G2L["1a"] = Instance.new("Frame", G2L["2"]);
+G2L["1a"]["Visible"] = false;
+G2L["1a"]["Active"] = true;
 G2L["1a"]["ZIndex"] = 5;
 G2L["1a"]["BorderSizePixel"] = 0;
 G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
@@ -226,6 +230,8 @@ G2L["1b"]["CornerRadius"] = UDim.new(0, 9);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab
 G2L["1c"] = Instance.new("Frame", G2L["1a"]);
+G2L["1c"]["Visible"] = false;
+G2L["1c"]["Active"] = true;
 G2L["1c"]["BorderSizePixel"] = 0;
 G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1c"]["Size"] = UDim2.new(1, 0, 1, 0);
@@ -328,6 +334,7 @@ G2L["2a"]["SoundId"] = [[rbxassetid://7107162229]];
 -- StarterGui.MyLibrary.Main.ContentContainer.Detail
 G2L["2b"] = Instance.new("Frame", G2L["1a"]);
 G2L["2b"]["Visible"] = false;
+G2L["2b"]["Active"] = true;
 G2L["2b"]["BorderSizePixel"] = 0;
 G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
 G2L["2b"]["Size"] = UDim2.new(0, 331, 0, 29);
@@ -337,6 +344,7 @@ G2L["2b"]["Name"] = [[Detail]];
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab
 G2L["2c"] = Instance.new("Frame", G2L["1a"]);
 G2L["2c"]["Visible"] = false;
+G2L["2c"]["Active"] = true;
 G2L["2c"]["BorderSizePixel"] = 0;
 G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2c"]["Size"] = UDim2.new(1, 0, 1, 0);
@@ -344,94 +352,234 @@ G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2c"]["Name"] = [[VisualTab]];
 G2L["2c"]["BackgroundTransparency"] = 1;
 
--- StarterGui.MyLibrary.Main.ContentContainer.CreditTab
-G2L["2d"] = Instance.new("Frame", G2L["1a"]);
-G2L["2d"]["Visible"] = false;
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams
+G2L["2d"] = Instance.new("TextButton", G2L["2c"]);
 G2L["2d"]["BorderSizePixel"] = 0;
-G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2d"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2d"]["TextSize"] = 14;
+G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2d"]["Size"] = UDim2.new(0, 275, 0, 30);
+G2L["2d"]["Name"] = [[Chams]];
 G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2d"]["Name"] = [[CreditTab]];
-G2L["2d"]["BackgroundTransparency"] = 1;
+G2L["2d"]["Text"] = [[Chams]];
+G2L["2d"]["Position"] = UDim2.new(0, 30, 0, 20);
 
--- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title
-G2L["2e"] = Instance.new("TextLabel", G2L["2d"]);
-G2L["2e"]["TextWrapped"] = true;
-G2L["2e"]["BorderSizePixel"] = 0;
-G2L["2e"]["TextScaled"] = true;
-G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2e"]["TextSize"] = 14;
-G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2e"]["BackgroundTransparency"] = 1;
-G2L["2e"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2e"]["Text"] = [[CREDITS]];
-G2L["2e"]["Name"] = [[Title]];
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.UICorner
+G2L["2e"] = Instance.new("UICorner", G2L["2d"]);
+G2L["2e"]["CornerRadius"] = UDim.new(0, 9);
 
--- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.UIPadding
-G2L["2f"] = Instance.new("UIPadding", G2L["2e"]);
-G2L["2f"]["PaddingBottom"] = UDim.new(0, 250);
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.UIStroke
+G2L["2f"] = Instance.new("UIStroke", G2L["2d"]);
+G2L["2f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["2f"]["Color"] = Color3.fromRGB(214, 44, 44);
 
--- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Owner
-G2L["30"] = Instance.new("TextLabel", G2L["2e"]);
-G2L["30"]["TextWrapped"] = true;
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.Icon
+G2L["30"] = Instance.new("ImageLabel", G2L["2d"]);
 G2L["30"]["BorderSizePixel"] = 0;
 G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["TextSize"] = 24;
-G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["BackgroundTransparency"] = 1;
-G2L["30"]["RichText"] = true;
-G2L["30"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["30"]["Image"] = [[rbxassetid://10723405649]];
+G2L["30"]["Size"] = UDim2.new(0, 20, 0, 20);
 G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["Text"] = [[Scripts : Xanta ]];
-G2L["30"]["Name"] = [[Owner]];
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Name"] = [[Icon]];
+G2L["30"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.UIPadding
+G2L["31"] = Instance.new("UIPadding", G2L["2d"]);
+G2L["31"]["PaddingRight"] = UDim.new(0, 100);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.LocalScript
+G2L["32"] = Instance.new("LocalScript", G2L["2d"]);
+
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.Sound
+G2L["33"] = Instance.new("Sound", G2L["2d"]);
+G2L["33"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+G2L["33"]["SoundId"] = [[rbxassetid://7107162229]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP
+G2L["34"] = Instance.new("TextButton", G2L["2c"]);
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["TextSize"] = 14;
+G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["34"]["Size"] = UDim2.new(0, 275, 0, 30);
+G2L["34"]["Name"] = [[Name ESP]];
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["Text"] = [[Name ESP]];
+G2L["34"]["Position"] = UDim2.new(0, 30, 0, 60);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.UICorner
+G2L["35"] = Instance.new("UICorner", G2L["34"]);
+G2L["35"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.UIPadding
+G2L["36"] = Instance.new("UIPadding", G2L["34"]);
+G2L["36"]["PaddingRight"] = UDim.new(0, 100);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.UIStroke
+G2L["37"] = Instance.new("UIStroke", G2L["34"]);
+G2L["37"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["37"]["Color"] = Color3.fromRGB(214, 44, 44);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.Icon
+G2L["38"] = Instance.new("ImageLabel", G2L["34"]);
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["Image"] = [[rbxassetid://10723405649]];
+G2L["38"]["Size"] = UDim2.new(0, 20, 0, 20);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["BackgroundTransparency"] = 1;
+G2L["38"]["Name"] = [[Icon]];
+G2L["38"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.LocalScript
+G2L["39"] = Instance.new("LocalScript", G2L["34"]);
+
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.Sound
+G2L["3a"] = Instance.new("Sound", G2L["34"]);
+G2L["3a"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+G2L["3a"]["SoundId"] = [[rbxassetid://7107162229]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers
+G2L["3b"] = Instance.new("TextButton", G2L["2c"]);
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["TextSize"] = 14;
+G2L["3b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3b"]["Size"] = UDim2.new(0, 275, 0, 30);
+G2L["3b"]["Name"] = [[Tracers]];
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Text"] = [[Tracers]];
+G2L["3b"]["Position"] = UDim2.new(0, 30, 0, 100);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.UICorner
+G2L["3c"] = Instance.new("UICorner", G2L["3b"]);
+G2L["3c"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.UIPadding
+G2L["3d"] = Instance.new("UIPadding", G2L["3b"]);
+G2L["3d"]["PaddingRight"] = UDim.new(0, 100);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.UIStroke
+G2L["3e"] = Instance.new("UIStroke", G2L["3b"]);
+G2L["3e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["3e"]["Color"] = Color3.fromRGB(214, 44, 44);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.Icon
+G2L["3f"] = Instance.new("ImageLabel", G2L["3b"]);
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["Image"] = [[rbxassetid://10723405649]];
+G2L["3f"]["Size"] = UDim2.new(0, 20, 0, 20);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["BackgroundTransparency"] = 1;
+G2L["3f"]["Name"] = [[Icon]];
+G2L["3f"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.LocalScript
+G2L["40"] = Instance.new("LocalScript", G2L["3b"]);
+
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.Sound
+G2L["41"] = Instance.new("Sound", G2L["3b"]);
+G2L["41"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+G2L["41"]["SoundId"] = [[rbxassetid://7107162229]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab
+G2L["42"] = Instance.new("Frame", G2L["1a"]);
+G2L["42"]["Visible"] = false;
+G2L["42"]["Active"] = true;
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["Name"] = [[CreditTab]];
+G2L["42"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title
+G2L["43"] = Instance.new("TextLabel", G2L["42"]);
+G2L["43"]["TextWrapped"] = true;
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["TextScaled"] = true;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["TextSize"] = 14;
+G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["43"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["BackgroundTransparency"] = 1;
+G2L["43"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Text"] = [[CREDITS]];
+G2L["43"]["Name"] = [[Title]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.UIPadding
+G2L["44"] = Instance.new("UIPadding", G2L["43"]);
+G2L["44"]["PaddingBottom"] = UDim.new(0, 250);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Owner
+G2L["45"] = Instance.new("TextLabel", G2L["43"]);
+G2L["45"]["TextWrapped"] = true;
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["TextSize"] = 24;
+G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["BackgroundTransparency"] = 1;
+G2L["45"]["RichText"] = true;
+G2L["45"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["Text"] = [[Scripts : Xanta ]];
+G2L["45"]["Name"] = [[Owner]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Owner.UIPadding
-G2L["31"] = Instance.new("UIPadding", G2L["30"]);
-G2L["31"]["PaddingTop"] = UDim.new(0, 175);
+G2L["46"] = Instance.new("UIPadding", G2L["45"]);
+G2L["46"]["PaddingTop"] = UDim.new(0, 175);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Dizzy
-G2L["32"] = Instance.new("TextLabel", G2L["2e"]);
-G2L["32"]["TextWrapped"] = true;
-G2L["32"]["BorderSizePixel"] = 0;
-G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["32"]["TextSize"] = 24;
-G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["32"]["TextColor3"] = Color3.fromRGB(107, 58, 255);
-G2L["32"]["BackgroundTransparency"] = 1;
-G2L["32"]["RichText"] = true;
-G2L["32"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["32"]["Text"] = [[discord.gg/ABCDEFG123]];
-G2L["32"]["Name"] = [[Dizzy]];
+G2L["47"] = Instance.new("TextButton", G2L["43"]);
+G2L["47"]["TextWrapped"] = true;
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["TextSize"] = 14;
+G2L["47"]["TextColor3"] = Color3.fromRGB(107, 58, 255);
+G2L["47"]["TextScaled"] = true;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["47"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["47"]["BackgroundTransparency"] = 1;
+G2L["47"]["Name"] = [[Dizzy]];
+G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Text"] = [[discord.gg/ABCDEFG123]];
+G2L["47"]["Position"] = UDim2.new(0, 0, 0, 225);
 
--- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Dizzy.UIPadding
-G2L["33"] = Instance.new("UIPadding", G2L["32"]);
-G2L["33"]["PaddingTop"] = UDim.new(0, 450);
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Dizzy.LocalScript
+G2L["48"] = Instance.new("LocalScript", G2L["47"]);
+
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Ui
-G2L["34"] = Instance.new("TextLabel", G2L["2d"]);
-G2L["34"]["TextWrapped"] = true;
-G2L["34"]["BorderSizePixel"] = 0;
-G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["TextSize"] = 24;
-G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["BackgroundTransparency"] = 1;
-G2L["34"]["RichText"] = true;
-G2L["34"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["34"]["Text"] = [[UI : 2FINE]];
-G2L["34"]["Name"] = [[Ui]];
+G2L["49"] = Instance.new("TextLabel", G2L["42"]);
+G2L["49"]["TextWrapped"] = true;
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["TextSize"] = 24;
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["BackgroundTransparency"] = 1;
+G2L["49"]["RichText"] = true;
+G2L["49"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Text"] = [[UI : 2FINE]];
+G2L["49"]["Name"] = [[Ui]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Ui.UIPadding
-G2L["35"] = Instance.new("UIPadding", G2L["34"]);
-G2L["35"]["PaddingBottom"] = UDim.new(0, 150);
+G2L["4a"] = Instance.new("UIPadding", G2L["49"]);
+G2L["4a"]["PaddingBottom"] = UDim.new(0, 150);
 
 -- StarterGui.MyLibrary.Main.LocalScript
-G2L["36"] = Instance.new("LocalScript", G2L["2"]);
+G2L["4b"] = Instance.new("LocalScript", G2L["2"]);
 
 
 -- StarterGui.MyLibrary.Main.Navigation.Aimbot.ToggleAimbotTab
@@ -439,22 +587,25 @@ local function C_f()
 local script = G2L["f"];
 	--// Variables
 	
-	local Aimbot = game.StarterGui.MyLibrary.Main.ContentContainer.AimbotTab
-	local Visuals = game.StarterGui.MyLibrary.Main.ContentContainer.VisualTab
-	local Credits = game.StarterGui.MyLibrary.Main.ContentContainer.CreditTab
-	local button = script.Parent
+	local Aimbot = script.Parent.Parent.Parent.ContentContainer.AimbotTab
+	local Visuals = script.Parent.Parent.Parent.ContentContainer.VisualTab
+	local Credits = script.Parent.Parent.Parent.ContentContainer.CreditTab
 	local button = script.Parent
 	local sfx = script.Parent.Sound
 	
 	--// Actual Function
 	button.MouseButton1Click:Connect(function()
-	
+		print("Button clicked!")
+		print("sfx:", sfx)
+		print("Aimbot:", Aimbot)
+		print("Visuals:", Visuals)
+		print("Credits:", Credits)
 		sfx.Volume = 0.5
 		sfx:Play()
 		Visuals.Visible = false
 		Credits.Visible = false
 		Aimbot.Visible = true
-		print("Success")
+		print("Code executed successfully!")
 	end)
 end;
 task.spawn(C_f);
@@ -463,22 +614,25 @@ local function C_13()
 local script = G2L["13"];
 	--// Variables
 	
-	local Aimbot = game.StarterGui.MyLibrary.Main.ContentContainer.AimbotTab
-	local Visuals = game.StarterGui.MyLibrary.Main.ContentContainer.VisualTab
-	local Credits = game.StarterGui.MyLibrary.Main.ContentContainer.CreditTab
-	local button = script.Parent
+	local Aimbot = script.Parent.Parent.Parent.ContentContainer.AimbotTab
+	local Visuals = script.Parent.Parent.Parent.ContentContainer.VisualTab
+	local Credits = script.Parent.Parent.Parent.ContentContainer.CreditTab
 	local button = script.Parent
 	local sfx = script.Parent.Sound
 	
 	--// Actual Function
 	button.MouseButton1Click:Connect(function()
-	
+		print("Button clicked!")
+		print("sfx:", sfx)
+		print("Aimbot:", Aimbot)
+		print("Visuals:", Visuals)
+		print("Credits:", Credits)
 		sfx.Volume = 0.5
 		sfx:Play()
 		Visuals.Visible = true
 		Credits.Visible = false
 		Aimbot.Visible = false
-		print("Success")
+		print("Code executed successfully!")
 	end)
 end;
 task.spawn(C_13);
@@ -487,21 +641,25 @@ local function C_17()
 local script = G2L["17"];
 	--// Variables
 	
-	local Aimbot = game.StarterGui.MyLibrary.Main.ContentContainer.AimbotTab
-	local Visuals = game.StarterGui.MyLibrary.Main.ContentContainer.VisualTab
-	local Credits = game.StarterGui.MyLibrary.Main.ContentContainer.CreditTab
+	local Aimbot = script.Parent.Parent.Parent.ContentContainer.AimbotTab
+	local Visuals = script.Parent.Parent.Parent.ContentContainer.VisualTab
+	local Credits = script.Parent.Parent.Parent.ContentContainer.CreditTab
 	local button = script.Parent
 	local sfx = script.Parent.Sound
 	
 	--// Actual Function
 	button.MouseButton1Click:Connect(function()
-	
+		print("Button clicked!")
+		print("sfx:", sfx)
+		print("Aimbot:", Aimbot)
+		print("Visuals:", Visuals)
+		print("Credits:", Credits)
 		sfx.Volume = 0.5
 		sfx:Play()
-		Visuals.Visible = true
-		Credits.Visible = false
+		Visuals.Visible = false
+		Credits.Visible = true
 		Aimbot.Visible = false
-		print("Success")
+		print("Code executed successfully!")
 	end)
 end;
 task.spawn(C_17);
@@ -961,15 +1119,627 @@ local script = G2L["29"];
 	end)
 end;
 task.spawn(C_29);
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.LocalScript
+local function C_32()
+local script = G2L["32"];
+	local sfx = script.Parent.Sound
+	local Button = script.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		sfx:Play()
+		-- Set the background color to a dark green
+		Button.BackgroundColor3 = Color3.fromRGB(0, 95, 11)
+	
+		-- Set the stroke color to a lighter green
+		Button.UIStroke.Color = Color3.fromRGB(0, 177, 18)
+		
+		
+		---// Function below here ->
+		
+		
+		
+		local Players = game:GetService("Players"):GetChildren()
+		local RunService = game:GetService("RunService")
+		local highlight = Instance.new("Highlight")
+		highlight.Name = "Highlights"
+	
+	
+		for i, v in pairs(Players) do
+			repeat wait() until v.Character
+			if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+				local highlightClone = highlight:Clone()
+				highlightClone.Adornee = v.Character
+				highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+				highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				highlightClone.Name = "Highlight"
+			end
+		end
+	
+		game.Players.PlayerAdded:Connect(function(player)
+			repeat wait() until player.Character
+			if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+				local highlightClone = highlight:Clone()
+				highlightClone.Adornee = player.Character
+				highlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart")
+				highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				highlightClone.Name = "Highlight"
+			end
+		end)
+	
+		game.Players.PlayerRemoving:Connect(function (playerremoved)
+			playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy()
+		end)
+	
+		RunService.Heartbeat:Connect(function ()
+			for i, v in pairs(Players) do
+				repeat wait() until v.Character
+				if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+					local highlightClone = highlight:Clone()
+					highlightClone.Adornee = v.Character
+					highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+					highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+					highlightClone.Name = "Highlight"
+					task.wait()
+				end
+			end
+		end)
+	end)
+end;
+task.spawn(C_32);
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.LocalScript
+local function C_39()
+local script = G2L["39"];
+	local sfx = script.Parent.Sound
+	local Button = script.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		sfx:Play()
+		-- Set the background color to a dark green
+		Button.BackgroundColor3 = Color3.fromRGB(0, 95, 11)
+	
+		-- Set the stroke color to a lighter green
+		Button.UIStroke.Color = Color3.fromRGB(0, 177, 18)
+		
+		
+		---// Function below here ->
+		
+	
+		
+		
+		local function API_Check()
+			if Drawing == nil then
+				return "No"
+			else
+				return "Yes"
+			end
+		end
+	
+		local Find_Required = API_Check()
+	
+		if Find_Required == "No" then
+			game:GetService("StarterGui"):SetCore("SendNotification",{
+				Title = "Xanta ESP";
+				Text = "ESP could not be loaded because your executor is unsupported.";
+				Duration = math.huge;
+				Button1 = "OK"
+			})
+	
+			return
+		end
+	
+		local Players = game:GetService("Players")
+		local RunService = game:GetService("RunService")
+		local UserInputService = game:GetService("UserInputService")
+		local Camera = workspace.CurrentCamera
+	
+		local Typing = false
+	
+		_G.SendNotifications = true   -- If set to true then the script would notify you frequently on any changes applied and when loaded / errored. (If a game can detect this, it is recommended to set it to false)
+		_G.DefaultSettings = false   -- If set to true then the ESP script would run with default settings regardless of any changes you made.
+	
+		_G.TeamCheck = false   -- If set to true then the script would create ESP only for the enemy team members.
+	
+		_G.ESPVisible = true   -- If set to true then the ESP will be visible and vice versa.
+		_G.TextColor = Color3.fromRGB(255, 80, 10)   -- The color that the boxes would appear as.
+		_G.TextSize = 14   -- The size of the text.
+		_G.Center = true   -- If set to true then the script would be located at the center of the label.
+		_G.Outline = true   -- If set to true then the text would have an outline.
+		_G.OutlineColor = Color3.fromRGB(0, 0, 0)   -- The outline color of the text.
+		_G.TextTransparency = 0.7   -- The transparency of the text.
+		_G.TextFont = Drawing.Fonts.UI   -- The font of the text. (UI, System, Plex, Monospace) 
+	
+		_G.DisableKey = Enum.KeyCode.Q   -- The key that disables / enables the ESP.
+	
+		local function CreateESP()
+			for _, v in next, Players:GetPlayers() do
+				if v.Name ~= Players.LocalPlayer.Name then
+					local ESP = Drawing.new("Text")
+	
+					RunService.RenderStepped:Connect(function()
+						if workspace:FindFirstChild(v.Name) ~= nil and workspace[v.Name]:FindFirstChild("HumanoidRootPart") ~= nil then
+							local Vector, OnScreen = Camera:WorldToViewportPoint(workspace[v.Name]:WaitForChild("Head", math.huge).Position)
+	
+							ESP.Size = _G.TextSize
+							ESP.Center = _G.Center
+							ESP.Outline = _G.Outline
+							ESP.OutlineColor = _G.OutlineColor
+							ESP.Color = _G.TextColor
+							ESP.Transparency = _G.TextTransparency
+							ESP.Font = _G.TextFont
+	
+							if OnScreen == true then
+								local Part1 = workspace:WaitForChild(v.Name, math.huge):WaitForChild("HumanoidRootPart", math.huge).Position
+								local Part2 = workspace:WaitForChild(Players.LocalPlayer.Name, math.huge):WaitForChild("HumanoidRootPart", math.huge).Position or 0
+								local Dist = (Part1 - Part2).Magnitude
+								ESP.Position = Vector2.new(Vector.X, Vector.Y - 25)
+								ESP.Text = ("("..tostring(math.floor(tonumber(Dist)))..") "..v.Name.." ["..workspace[v.Name].Humanoid.Health.."]")
+								if _G.TeamCheck == true then 
+									if Players.LocalPlayer.Team ~= v.Team then
+										ESP.Visible = _G.ESPVisible
+									else
+										ESP.Visible = false
+									end
+								else
+									ESP.Visible = _G.ESPVisible
+								end
+							else
+								ESP.Visible = false
+							end
+						else
+							ESP.Visible = false
+						end
+					end)
+	
+					Players.PlayerRemoving:Connect(function()
+						ESP.Visible = false
+					end)
+				end
+			end
+	
+			Players.PlayerAdded:Connect(function(Player)
+				Player.CharacterAdded:Connect(function(v)
+					if v.Name ~= Players.LocalPlayer.Name then 
+						local ESP = Drawing.new("Text")
+	
+						RunService.RenderStepped:Connect(function()
+							if workspace:FindFirstChild(v.Name) ~= nil and workspace[v.Name]:FindFirstChild("HumanoidRootPart") ~= nil then
+								local Vector, OnScreen = Camera:WorldToViewportPoint(workspace[v.Name]:WaitForChild("Head", math.huge).Position)
+	
+								ESP.Size = _G.TextSize
+								ESP.Center = _G.Center
+								ESP.Outline = _G.Outline
+								ESP.OutlineColor = _G.OutlineColor
+								ESP.Color = _G.TextColor
+								ESP.Transparency = _G.TextTransparency
+	
+								if OnScreen == true then
+									local Part1 = workspace:WaitForChild(v.Name, math.huge):WaitForChild("HumanoidRootPart", math.huge).Position
+									local Part2 = workspace:WaitForChild(Players.LocalPlayer.Name, math.huge):WaitForChild("HumanoidRootPart", math.huge).Position or 0
+									local Dist = (Part1 - Part2).Magnitude
+									ESP.Position = Vector2.new(Vector.X, Vector.Y - 25)
+									ESP.Text = ("("..tostring(math.floor(tonumber(Dist)))..") "..v.Name.." ["..workspace[v.Name].Humanoid.Health.."]")
+									if _G.TeamCheck == true then 
+										if Players.LocalPlayer.Team ~= Player.Team then
+											ESP.Visible = _G.ESPVisible
+										else
+											ESP.Visible = false
+										end
+									else
+										ESP.Visible = _G.ESPVisible
+									end
+								else
+									ESP.Visible = false
+								end
+							else
+								ESP.Visible = false
+							end
+						end)
+	
+						Players.PlayerRemoving:Connect(function()
+							ESP.Visible = false
+						end)
+					end
+				end)
+			end)
+		end
+	
+		if _G.DefaultSettings == true then
+			_G.TeamCheck = false
+			_G.ESPVisible = true
+			_G.TextColor = Color3.fromRGB(40, 90, 255)
+			_G.TextSize = 14
+			_G.Center = true
+			_G.Outline = false
+			_G.OutlineColor = Color3.fromRGB(0, 0, 0)
+			_G.DisableKey = Enum.KeyCode.Q
+			_G.TextTransparency = 0.75
+		end
+	
+		UserInputService.TextBoxFocused:Connect(function()
+			Typing = true
+		end)
+	
+		UserInputService.TextBoxFocusReleased:Connect(function()
+			Typing = false
+		end)
+	
+		UserInputService.InputBegan:Connect(function(Input)
+			if Input.KeyCode == _G.DisableKey and Typing == false then
+				_G.ESPVisible = not _G.ESPVisible
+	
+				if _G.SendNotifications == true then
+					game:GetService("StarterGui"):SetCore("SendNotification",{
+						Title = "Xanta ESP";
+						Text = "visibility is now set to "..tostring(_G.ESPVisible)..".";
+						Duration = 5;
+					})
+				end
+			end
+		end)
+	
+		local Success, Errored = pcall(function()
+			CreateESP()
+		end)
+	
+		if Success and not Errored then
+			if _G.SendNotifications == true then
+				game:GetService("StarterGui"):SetCore("SendNotification",{
+					Title = "Xanta ESP";
+					Text = "successfully loaded.";
+					Duration = 5;
+				})
+			end
+		elseif Errored and not Success then
+			if _G.SendNotifications == true then
+				game:GetService("StarterGui"):SetCore("SendNotification",{
+					Title = "Xanta ESP";
+					Text = "ESP has errored while loading check the developer console! ";
+					Duration = 5;
+				})
+			end
+			TestService:Message("The ESP script has errored, please notify Exunys with the following information :")
+			warn(Errored)
+			print("!! IF THE ERROR IS A FALSE POSITIVE (says that a player cannot be found) THEN DO NOT BOTHER !!")
+		end
+		
+		
+		
+		
+	end)
+end;
+task.spawn(C_39);
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.LocalScript
+local function C_40()
+local script = G2L["40"];
+	local sfx = script.Parent.Sound
+	local Button = script.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		sfx:Play()
+		-- Set the background color to a dark green
+		Button.BackgroundColor3 = Color3.fromRGB(0, 95, 11)
+	
+		-- Set the stroke color to a lighter green
+		Button.UIStroke.Color = Color3.fromRGB(0, 177, 18)
+		
+		
+		---// Function below here ->
+	
+	
+	
+		local function API_Check()
+			if Drawing == nil then
+				return "No"
+			else
+				return "Yes"
+			end
+		end
+	
+		local Find_Required = API_Check()
+	
+		if Find_Required == "No" then
+			game:GetService("StarterGui"):SetCore("SendNotification",{
+				Title = "Xanta Tracers";
+				Text = "Tracer could not be loaded because your executor is unsupported.";
+				Duration = math.huge;
+				Button1 = "OK"
+			})
+	
+			return
+		end
+	
+		local RunService = game:GetService("RunService")
+		local Players = game:GetService("Players")
+		local Camera = game:GetService("Workspace").CurrentCamera
+		local UserInputService = game:GetService("UserInputService")
+		local TestService = game:GetService("TestService")
+	
+		local Typing = false
+	
+		_G.SendNotifications = true   -- If set to true then the script would notify you frequently on any changes applied and when loaded / errored. (If a game can detect this, it is recommended to set it to false)
+		_G.DefaultSettings = false   -- If set to true then the tracer script would run with default settings regardless of any changes you made.
+	
+		_G.TeamCheck = false   -- If set to true then the script would create tracers only for the enemy team members.
+	
+		--[!]-- ONLY ONE OF THESE VALUES SHOULD BE SET TO TRUE TO NOT ERROR THE SCRIPT --[!]--
+	
+		_G.FromMouse = false   -- If set to true, the tracers will come from the position of your mouse curson on your screen.
+		_G.FromCenter = false   -- If set to true, the tracers will come from the center of your screen.
+		_G.FromBottom = true   -- If set to true, the tracers will come from the bottom of your screen.
+	
+		_G.TracersVisible = true   -- If set to true then the tracers will be visible and vice versa.
+		_G.TracerColor = Color3.fromRGB(255, 80, 10)   -- The color that the tracers would appear as.
+		_G.TracerThickness = 1   -- The thickness of the tracers.
+		_G.TracerTransparency = 0.7   -- The transparency of the tracers.
+	
+		_G.ModeSkipKey = Enum.KeyCode.E   -- The key that changes between modes that indicate where will the tracers come from.
+		_G.DisableKey = Enum.KeyCode.Q   -- The key that disables / enables the tracers.
+	
+		local function CreateTracers()
+			for _, v in next, Players:GetPlayers() do
+				if v.Name ~= game.Players.LocalPlayer.Name then
+					local TracerLine = Drawing.new("Line")
+	
+					RunService.RenderStepped:Connect(function()
+						if workspace:FindFirstChild(v.Name) ~= nil and workspace[v.Name]:FindFirstChild("HumanoidRootPart") ~= nil then
+							local HumanoidRootPart_Position, HumanoidRootPart_Size = workspace[v.Name].HumanoidRootPart.CFrame, workspace[v.Name].HumanoidRootPart.Size * 1
+							local Vector, OnScreen = Camera:WorldToViewportPoint(HumanoidRootPart_Position * CFrame.new(0, -HumanoidRootPart_Size.Y, 0).p)
+	
+							TracerLine.Thickness = _G.TracerThickness
+							TracerLine.Transparency = _G.TracerTransparency
+							TracerLine.Color = _G.TracerColor
+	
+							if _G.FromMouse == true and _G.FromCenter == false and _G.FromBottom == false then
+								TracerLine.From = Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y)
+							elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false then
+								TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+							elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true then
+								TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
+							end
+	
+							if OnScreen == true  then
+								TracerLine.To = Vector2.new(Vector.X, Vector.Y)
+								if _G.TeamCheck == true then 
+									if Players.LocalPlayer.Team ~= v.Team then
+										TracerLine.Visible = _G.TracersVisible
+									else
+										TracerLine.Visible = false
+									end
+								else
+									TracerLine.Visible = _G.TracersVisible
+								end
+							else
+								TracerLine.Visible = false
+							end
+						else
+							TracerLine.Visible = false
+						end
+					end)
+	
+					Players.PlayerRemoving:Connect(function()
+						TracerLine.Visible = false
+					end)
+				end
+			end
+	
+			Players.PlayerAdded:Connect(function(Player)
+				Player.CharacterAdded:Connect(function(v)
+					if v.Name ~= game.Players.LocalPlayer.Name then
+						local TracerLine = Drawing.new("Line")
+	
+						RunService.RenderStepped:Connect(function()
+							if workspace:FindFirstChild(v.Name) ~= nil and workspace[v.Name]:FindFirstChild("HumanoidRootPart") ~= nil then
+								local HumanoidRootPart_Position, HumanoidRootPart_Size = workspace[v.Name].HumanoidRootPart.CFrame, workspace[v.Name].HumanoidRootPart.Size * 1
+								local Vector, OnScreen = Camera:WorldToViewportPoint(HumanoidRootPart_Position * CFrame.new(0, -HumanoidRootPart_Size.Y, 0).p)
+	
+								TracerLine.Thickness = _G.TracerThickness
+								TracerLine.Transparency = _G.TracerTransparency
+								TracerLine.Color = _G.TracerColor
+	
+								if _G.FromMouse == true and _G.FromCenter == false and _G.FromBottom == false then
+									TracerLine.From = Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y)
+								elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false then
+									TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+								elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true then
+									TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
+								end
+	
+								if OnScreen == true  then
+									TracerLine.To = Vector2.new(Vector.X, Vector.Y)
+									if _G.TeamCheck == true then 
+										if Players.LocalPlayer.Team ~= Player.Team then
+											TracerLine.Visible = _G.TracersVisible
+										else
+											TracerLine.Visible = false
+										end
+									else
+										TracerLine.Visible = _G.TracersVisible
+									end
+								else
+									TracerLine.Visible = false
+								end
+							else
+								TracerLine.Visible = false
+							end
+						end)
+	
+						Players.PlayerRemoving:Connect(function()
+							TracerLine.Visible = false
+						end)
+					end
+				end)
+			end)
+		end
+	
+		UserInputService.TextBoxFocused:Connect(function()
+			Typing = true
+		end)
+	
+		UserInputService.TextBoxFocusReleased:Connect(function()
+			Typing = false
+		end)
+	
+		UserInputService.InputBegan:Connect(function(Input)
+			if Input.KeyCode == _G.ModeSkipKey and Typing == false then
+				if _G.FromMouse == true and _G.FromCenter == false and _G.FromBottom == false and _G.TracersVisible == true then
+					_G.FromCenter = false
+					_G.FromBottom = true
+					_G.FromMouse = false
+	
+					if _G.SendNotifications == true then
+						game:GetService("StarterGui"):SetCore("SendNotification",{
+							Title = "Exunys Developer";
+							Text = "Tracers will be now coming from the bottom of your screen (Mode 1)";
+							Duration = 5;
+						})
+					end
+				elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true and _G.TracersVisible == true then
+					_G.FromCenter = true
+					_G.FromBottom = false
+					_G.FromMouse = false
+	
+	
+				elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false and _G.TracersVisible == true then
+					_G.FromCenter = true
+					_G.FromBottom = false
+					_G.FromMouse = true
+	
+				end
+			elseif Input.KeyCode == _G.DisableKey and Typing == false then
+				_G.TracersVisible = not _G.TracersVisible
+	
+				if _G.SendNotifications == true then
+					game:GetService("StarterGui"):SetCore("SendNotification",{
+						Title = "Xanta ESP";
+						Text = "visibility is now set to "..tostring(_G.TracersVisible)..".";
+						Duration = 5;
+					})
+				end
+			end
+		end)
+	
+		if _G.DefaultSettings == true then
+			_G.TeamCheck = false
+			_G.FromMouse = false
+			_G.FromCenter = false
+			_G.FromBottom = true
+			_G.TracersVisible = true
+			_G.TracerColor = Color3.fromRGB(40, 90, 255)
+			_G.TracerThickness = 1
+			_G.TracerTransparency = 0.5
+			_G.ModeSkipKey = Enum.KeyCode.E
+			_G.DisableKey = Enum.KeyCode.Q
+		end
+	
+		local Success, Errored = pcall(function()
+			CreateTracers()
+		end)
+	
+		if Success and not Errored then
+			if _G.SendNotifications == true then
+				game:GetService("StarterGui"):SetCore("SendNotification",{
+					Title = "Xanta Tracers";
+					Text = "successfully loaded.";
+					Duration = 5;
+				})
+			end
+		elseif Errored and not Success then
+			if _G.SendNotifications == true then
+				game:GetService("StarterGui"):SetCore("SendNotification",{
+					Title = "Xanta Tracers";
+					Text = "Error Please check developer console! (F9) ";
+					Duration = 5;
+				})
+			end
+		end
+	
+	
+		
+	end)
+end;
+task.spawn(C_40);
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Dizzy.LocalScript
+local function C_48()
+local script = G2L["48"];
+	local TextButton = script.Parent
+	local text = "Text to be copied"
+	
+	TextButton.MouseButton1Click:Connect(function()
+		local http = game:GetService("HttpService")
+		local url = "https://roblox.github.io/clipboard-redirect/?text=".. http:UrlEncode(text)
+		local browser = Instance.new("BrowserFrame")
+		browser.Parent = game.CoreGui
+		browser.Size = UDim2.new(0, 400, 0, 200)
+		browser.Url = url
+	end)
+end;
+task.spawn(C_48);
 -- StarterGui.MyLibrary.Main.LocalScript
-local function C_36()
-local script = G2L["36"];
+local function C_4b()
+local script = G2L["4b"];
 	local main = script.Parent
+	local content = script.Parent.ContentContainer
+	local Navigation = script.Parent.Navigation
+	local topbar = script.Parent.Topbar
+	local shadow = script.Parent.DropShadowHolder
+	local textLabel = script.Parent.Topbar.Title
+	
+	
+	main.Visible = true
+	content.Visible = false
+	Navigation.Visible = false
+	topbar.Visible = false
+	shadow.Visible = false
+	
+	
+	
+	wait(1.5)
+	
+	
+	for i = 1, 20 do
+		main.Transparency = 1 - (i - 1) / 20
+		wait(0.05)
+	end
+	
+	wait(.5)
+	
+	
+	main.Visible = true
+	content.Visible = true
+	Navigation.Visible = true
+	topbar.Visible = true
+	shadow.Visible = true
+	
+	
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Xanta";
+		Text = "Succesfully Loaded, Have a nice day!";
+		Duration = 5;
+	})
+	
+	local function typewrite(object, text)
+		textLabel.Text = "" -- clear the text label
+		for i = 1, #text, 1 do
+			textLabel.Text = textLabel.Text.. text:sub(i, i) -- append the next character
+			wait(0.02)
+		end
+	end
+	
+	-- Call the typewrite function with the desired text
+	typewrite(nil, "Xanta")
 	
 	main.Draggable = true
 	main.Selectable = true
 	main.Active = true
+	
+	
+	wait(1)
+	
+	print("Xanta Loaded Succesfully!")
 end;
-task.spawn(C_36);
+task.spawn(C_4b);
 
 return G2L["1"], require;
