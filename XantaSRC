@@ -1,0 +1,975 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 54 | Scripts: 6 | Modules: 0
+local G2L = {};
+
+-- StarterGui.MyLibrary
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[MyLibrary]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.MyLibrary.Main
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["2"]["Size"] = UDim2.new(0, 400, 0, 400);
+G2L["2"]["Position"] = UDim2.new(0.45293, 0, 0.2244, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Main]];
+
+-- StarterGui.MyLibrary.Main.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.DropShadowHolder
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["ZIndex"] = 0;
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["4"]["Name"] = [[DropShadowHolder]];
+G2L["4"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.MyLibrary.Main.DropShadowHolder.DropShadow
+G2L["5"] = Instance.new("ImageLabel", G2L["4"]);
+G2L["5"]["ZIndex"] = 0;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
+G2L["5"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["5"]["ImageTransparency"] = 0.5;
+G2L["5"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["5"]["Image"] = [[rbxassetid://6014261993]];
+G2L["5"]["Size"] = UDim2.new(1, 47, 1, 47);
+G2L["5"]["BackgroundTransparency"] = 1;
+G2L["5"]["Name"] = [[DropShadow]];
+G2L["5"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+-- StarterGui.MyLibrary.Main.Topbar
+G2L["6"] = Instance.new("Frame", G2L["2"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(181, 40, 12);
+G2L["6"]["Size"] = UDim2.new(0, 400, 0, 41);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[Topbar]];
+
+-- StarterGui.MyLibrary.Main.Topbar.UICorner
+G2L["7"] = Instance.new("UICorner", G2L["6"]);
+G2L["7"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.Topbar.Weurd
+G2L["8"] = Instance.new("Frame", G2L["6"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(181, 40, 12);
+G2L["8"]["Size"] = UDim2.new(0, 400, 0, 22);
+G2L["8"]["Position"] = UDim2.new(0, 0, 0.46341, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Name"] = [[Weurd]];
+
+-- StarterGui.MyLibrary.Main.Topbar.Weurd.Frame
+G2L["9"] = Instance.new("Frame", G2L["8"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["Size"] = UDim2.new(0, 400, 0, 1);
+G2L["9"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.MyLibrary.Main.Topbar.Title
+G2L["a"] = Instance.new("TextLabel", G2L["6"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextScaled"] = true;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 250, 250);
+G2L["a"]["BackgroundTransparency"] = 1;
+G2L["a"]["Size"] = UDim2.new(0, 176, 0, 35);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[Xanta]];
+G2L["a"]["Name"] = [[Title]];
+G2L["a"]["Position"] = UDim2.new(0, 0, 0.07317, 0);
+
+-- StarterGui.MyLibrary.Main.Topbar.Title.TextLabel
+G2L["b"] = Instance.new("TextLabel", G2L["a"]);
+G2L["b"]["TextWrapped"] = true;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextScaled"] = true;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["TextSize"] = 14;
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Size"] = UDim2.new(0, 111, 0, 19);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[- V1.0]];
+G2L["b"]["Position"] = UDim2.new(0.60795, 0, 0.22857, 0);
+
+-- StarterGui.MyLibrary.Main.Navigation
+G2L["c"] = Instance.new("Frame", G2L["2"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["Size"] = UDim2.new(0, 384, 0, 42);
+G2L["c"]["Position"] = UDim2.new(0.0175, 0, 0.1275, 0);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Name"] = [[Navigation]];
+G2L["c"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.MyLibrary.Main.Navigation.Aimbot
+G2L["d"] = Instance.new("TextButton", G2L["c"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["ZIndex"] = 4;
+G2L["d"]["Size"] = UDim2.new(0, 121, 0, 30);
+G2L["d"]["Name"] = [[Aimbot]];
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[AIMBOT]];
+G2L["d"]["Position"] = UDim2.new(0.07031, 0, 0.11905, 0);
+
+-- StarterGui.MyLibrary.Main.Navigation.Aimbot.UICorner
+G2L["e"] = Instance.new("UICorner", G2L["d"]);
+G2L["e"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.Navigation.Aimbot.ToggleAimbotTab
+G2L["f"] = Instance.new("LocalScript", G2L["d"]);
+G2L["f"]["Name"] = [[ToggleAimbotTab]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Aimbot.Sound
+G2L["10"] = Instance.new("Sound", G2L["d"]);
+G2L["10"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+G2L["10"]["SoundId"] = [[rbxassetid://8432836186]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Visuals
+G2L["11"] = Instance.new("TextButton", G2L["c"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextSize"] = 14;
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["ZIndex"] = 4;
+G2L["11"]["Size"] = UDim2.new(0, 121, 0, 30);
+G2L["11"]["Name"] = [[Visuals]];
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[Visuals]];
+G2L["11"]["Position"] = UDim2.new(0.34375, 0, 0.11905, 0);
+
+-- StarterGui.MyLibrary.Main.Navigation.Visuals.UICorner
+G2L["12"] = Instance.new("UICorner", G2L["11"]);
+G2L["12"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.Navigation.Visuals.ToggleVisualsTab
+G2L["13"] = Instance.new("LocalScript", G2L["11"]);
+G2L["13"]["Name"] = [[ToggleVisualsTab]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Visuals.Sound
+G2L["14"] = Instance.new("Sound", G2L["11"]);
+G2L["14"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+G2L["14"]["SoundId"] = [[rbxassetid://8432836186]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Credits
+G2L["15"] = Instance.new("TextButton", G2L["c"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["ZIndex"] = 4;
+G2L["15"]["Size"] = UDim2.new(0, 121, 0, 30);
+G2L["15"]["Name"] = [[Credits]];
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[Credits]];
+G2L["15"]["Position"] = UDim2.new(0.61719, 0, 0.11905, 0);
+
+-- StarterGui.MyLibrary.Main.Navigation.Credits.UICorner
+G2L["16"] = Instance.new("UICorner", G2L["15"]);
+G2L["16"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.Navigation.Credits.ToggleCreditsTab
+G2L["17"] = Instance.new("LocalScript", G2L["15"]);
+G2L["17"]["Name"] = [[ToggleCreditsTab]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Credits.Sound
+G2L["18"] = Instance.new("Sound", G2L["15"]);
+G2L["18"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+G2L["18"]["SoundId"] = [[rbxassetid://8432836186]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Frame
+G2L["19"] = Instance.new("Frame", G2L["c"]);
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["19"]["Size"] = UDim2.new(0, 331, 0, 15);
+G2L["19"]["Position"] = UDim2.new(0.07031, 0, 0.66667, 0);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.MyLibrary.Main.ContentContainer
+G2L["1a"] = Instance.new("Frame", G2L["2"]);
+G2L["1a"]["ZIndex"] = 5;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["1a"]["Size"] = UDim2.new(0, 331, 0, 282);
+G2L["1a"]["Position"] = UDim2.new(0.0825, 0, 0.235, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[ContentContainer]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.UICorner
+G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
+G2L["1b"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab
+G2L["1c"] = Instance.new("Frame", G2L["1a"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Name"] = [[AimbotTab]];
+G2L["1c"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn
+G2L["1d"] = Instance.new("TextButton", G2L["1c"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1d"]["Size"] = UDim2.new(0, 275, 0, 30);
+G2L["1d"]["Name"] = [[AimbotBtn]];
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[Aimlock]];
+G2L["1d"]["Position"] = UDim2.new(0, 30, 0, 20);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.UICorner
+G2L["1e"] = Instance.new("UICorner", G2L["1d"]);
+G2L["1e"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.UIStroke
+G2L["1f"] = Instance.new("UIStroke", G2L["1d"]);
+G2L["1f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["1f"]["Color"] = Color3.fromRGB(214, 44, 44);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.Icon
+G2L["20"] = Instance.new("ImageLabel", G2L["1d"]);
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["Image"] = [[rbxassetid://10723405649]];
+G2L["20"]["Size"] = UDim2.new(0, 20, 0, 20);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["BackgroundTransparency"] = 1;
+G2L["20"]["Name"] = [[Icon]];
+G2L["20"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.UIPadding
+G2L["21"] = Instance.new("UIPadding", G2L["1d"]);
+G2L["21"]["PaddingRight"] = UDim.new(0, 100);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.LocalScript
+G2L["22"] = Instance.new("LocalScript", G2L["1d"]);
+
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.Sound
+G2L["23"] = Instance.new("Sound", G2L["1d"]);
+G2L["23"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+G2L["23"]["SoundId"] = [[rbxassetid://7107162229]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV
+G2L["24"] = Instance.new("TextButton", G2L["1c"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["24"]["Size"] = UDim2.new(0, 275, 0, 30);
+G2L["24"]["Name"] = [[FOV]];
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[Show FOV]];
+G2L["24"]["Position"] = UDim2.new(0, 30, 0, 60);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.UICorner
+G2L["25"] = Instance.new("UICorner", G2L["24"]);
+G2L["25"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.UIPadding
+G2L["26"] = Instance.new("UIPadding", G2L["24"]);
+G2L["26"]["PaddingRight"] = UDim.new(0, 100);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.UIStroke
+G2L["27"] = Instance.new("UIStroke", G2L["24"]);
+G2L["27"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["27"]["Color"] = Color3.fromRGB(214, 44, 44);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.Icon
+G2L["28"] = Instance.new("ImageLabel", G2L["24"]);
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["Image"] = [[rbxassetid://10723405649]];
+G2L["28"]["Size"] = UDim2.new(0, 20, 0, 20);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["BackgroundTransparency"] = 1;
+G2L["28"]["Name"] = [[Icon]];
+G2L["28"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.LocalScript
+G2L["29"] = Instance.new("LocalScript", G2L["24"]);
+
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.Sound
+G2L["2a"] = Instance.new("Sound", G2L["24"]);
+G2L["2a"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+G2L["2a"]["SoundId"] = [[rbxassetid://7107162229]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.Detail
+G2L["2b"] = Instance.new("Frame", G2L["1a"]);
+G2L["2b"]["Visible"] = false;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["2b"]["Size"] = UDim2.new(0, 331, 0, 29);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Name"] = [[Detail]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab
+G2L["2c"] = Instance.new("Frame", G2L["1a"]);
+G2L["2c"]["Visible"] = false;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Name"] = [[VisualTab]];
+G2L["2c"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab
+G2L["2d"] = Instance.new("Frame", G2L["1a"]);
+G2L["2d"]["Visible"] = false;
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Name"] = [[CreditTab]];
+G2L["2d"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title
+G2L["2e"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["2e"]["TextWrapped"] = true;
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextScaled"] = true;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["BackgroundTransparency"] = 1;
+G2L["2e"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[CREDITS]];
+G2L["2e"]["Name"] = [[Title]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.UIPadding
+G2L["2f"] = Instance.new("UIPadding", G2L["2e"]);
+G2L["2f"]["PaddingBottom"] = UDim.new(0, 250);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Owner
+G2L["30"] = Instance.new("TextLabel", G2L["2e"]);
+G2L["30"]["TextWrapped"] = true;
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["TextSize"] = 24;
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["RichText"] = true;
+G2L["30"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[Scripts : Xanta ]];
+G2L["30"]["Name"] = [[Owner]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Owner.UIPadding
+G2L["31"] = Instance.new("UIPadding", G2L["30"]);
+G2L["31"]["PaddingTop"] = UDim.new(0, 175);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Dizzy
+G2L["32"] = Instance.new("TextLabel", G2L["2e"]);
+G2L["32"]["TextWrapped"] = true;
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["TextSize"] = 24;
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["32"]["TextColor3"] = Color3.fromRGB(107, 58, 255);
+G2L["32"]["BackgroundTransparency"] = 1;
+G2L["32"]["RichText"] = true;
+G2L["32"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Text"] = [[discord.gg/ABCDEFG123]];
+G2L["32"]["Name"] = [[Dizzy]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Dizzy.UIPadding
+G2L["33"] = Instance.new("UIPadding", G2L["32"]);
+G2L["33"]["PaddingTop"] = UDim.new(0, 450);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Ui
+G2L["34"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["34"]["TextWrapped"] = true;
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["TextSize"] = 24;
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["BackgroundTransparency"] = 1;
+G2L["34"]["RichText"] = true;
+G2L["34"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["Text"] = [[UI : 2FINE]];
+G2L["34"]["Name"] = [[Ui]];
+
+-- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Ui.UIPadding
+G2L["35"] = Instance.new("UIPadding", G2L["34"]);
+G2L["35"]["PaddingBottom"] = UDim.new(0, 150);
+
+-- StarterGui.MyLibrary.Main.LocalScript
+G2L["36"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.MyLibrary.Main.Navigation.Aimbot.ToggleAimbotTab
+local function C_f()
+local script = G2L["f"];
+	--// Variables
+	
+	local Aimbot = game.StarterGui.MyLibrary.Main.ContentContainer.AimbotTab
+	local Visuals = game.StarterGui.MyLibrary.Main.ContentContainer.VisualTab
+	local Credits = game.StarterGui.MyLibrary.Main.ContentContainer.CreditTab
+	local button = script.Parent
+	local button = script.Parent
+	local sfx = script.Parent.Sound
+	
+	--// Actual Function
+	button.MouseButton1Click:Connect(function()
+	
+		sfx.Volume = 0.5
+		sfx:Play()
+		Visuals.Visible = false
+		Credits.Visible = false
+		Aimbot.Visible = true
+		print("Success")
+	end)
+end;
+task.spawn(C_f);
+-- StarterGui.MyLibrary.Main.Navigation.Visuals.ToggleVisualsTab
+local function C_13()
+local script = G2L["13"];
+	--// Variables
+	
+	local Aimbot = game.StarterGui.MyLibrary.Main.ContentContainer.AimbotTab
+	local Visuals = game.StarterGui.MyLibrary.Main.ContentContainer.VisualTab
+	local Credits = game.StarterGui.MyLibrary.Main.ContentContainer.CreditTab
+	local button = script.Parent
+	local button = script.Parent
+	local sfx = script.Parent.Sound
+	
+	--// Actual Function
+	button.MouseButton1Click:Connect(function()
+	
+		sfx.Volume = 0.5
+		sfx:Play()
+		Visuals.Visible = true
+		Credits.Visible = false
+		Aimbot.Visible = false
+		print("Success")
+	end)
+end;
+task.spawn(C_13);
+-- StarterGui.MyLibrary.Main.Navigation.Credits.ToggleCreditsTab
+local function C_17()
+local script = G2L["17"];
+	--// Variables
+	
+	local Aimbot = game.StarterGui.MyLibrary.Main.ContentContainer.AimbotTab
+	local Visuals = game.StarterGui.MyLibrary.Main.ContentContainer.VisualTab
+	local Credits = game.StarterGui.MyLibrary.Main.ContentContainer.CreditTab
+	local button = script.Parent
+	local sfx = script.Parent.Sound
+	
+	--// Actual Function
+	button.MouseButton1Click:Connect(function()
+	
+		sfx.Volume = 0.5
+		sfx:Play()
+		Visuals.Visible = true
+		Credits.Visible = false
+		Aimbot.Visible = false
+		print("Success")
+	end)
+end;
+task.spawn(C_17);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.LocalScript
+local function C_22()
+local script = G2L["22"];
+	local sfx = script.Parent.Sound
+	local Button = script.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		sfx:Play()
+		-- Set the background color to a dark green
+		Button.BackgroundColor3 = Color3.fromRGB(0, 95, 11)
+	
+		-- Set the stroke color to a lighter green
+		Button.UIStroke.Color = Color3.fromRGB(0, 177, 18)
+		
+		
+		---// Function below here ->
+		
+		--gg zacke runs u
+		--Made by Zacke
+	
+		getgenv().Prediction = 0.12466
+		getgenv().AimPart = "HumanoidRootPart"
+		getgenv().Key = "v"
+		getgenv().DisableKey = "P"
+	
+		getgenv().FOV = true
+		getgenv().ShowFOV = false
+		getgenv().FOVSize = 55
+	
+		--// Variables (Service)
+	
+		local Players = game:GetService("Players")
+		local RS = game:GetService("RunService")
+		local WS = game:GetService("Workspace")
+		local GS = game:GetService("GuiService")
+		local SG = game:GetService("StarterGui")
+	
+		--// Variables (regular)
+	
+		local LP = Players.LocalPlayer
+		local Mouse = LP:GetMouse()
+		local Camera = WS.CurrentCamera
+		local GetGuiInset = GS.GetGuiInset
+	
+		local AimlockState = true
+		local Locked
+		local Victim
+	
+		local SelectedKey = getgenv().Key
+		local SelectedDisableKey = getgenv().DisableKey
+	
+		--// Notification function
+	
+		function Notify(tx)
+			SG:SetCore("SendNotification", {
+				Title = "Zacke's lock",
+				Text = tx,
+				Duration = 5
+			})
+		end
+	
+		--// Check if aimlock is loaded
+	
+		if getgenv().Loaded == true then
+			Notify("u already injected dumbass - Zacke")
+			return
+		end
+	
+		getgenv().Loaded = true
+	
+		--// FOV Circle
+	
+		local fov = Drawing.new("Circle")
+		fov.Filled = false
+		fov.Transparency = 1
+		fov.Thickness = 1
+		fov.Color = Color3.fromRGB(255, 255, 0)
+		fov.NumSides = 1000
+	
+		--// Functions
+	
+		function update()
+			if getgenv().FOV == true then
+				if fov then
+					fov.Radius = getgenv().FOVSize * 2
+					fov.Visible = getgenv().ShowFOV
+					fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+	
+					return fov
+				end
+			end
+		end
+	
+		function WTVP(arg)
+			return Camera:WorldToViewportPoint(arg)
+		end
+	
+		function WTSP(arg)
+			return Camera.WorldToScreenPoint(Camera, arg)
+		end
+	
+		function getClosest()
+			local closestPlayer
+			local shortestDistance = math.huge
+	
+			for i, v in pairs(game.Players:GetPlayers()) do
+				local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+				local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+	
+				if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+					local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+					local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+	
+					if (getgenv().FOV) then
+						if (fov.Radius > magnitude and magnitude < shortestDistance) then
+							closestPlayer = v
+							shortestDistance = magnitude
+						end
+					else
+						if (magnitude < shortestDistance) then
+							closestPlayer = v
+							shortestDistance = magnitude
+						end
+					end
+				end
+			end
+			return closestPlayer
+		end
+	
+		--// Checks if key is down
+	
+		Mouse.KeyDown:Connect(function(k)
+			SelectedKey = SelectedKey:lower()
+			SelectedDisableKey = SelectedDisableKey:lower()
+			if k == SelectedKey then
+				if AimlockState == true then
+					Locked = not Locked
+					if Locked then
+						Victim = getClosest()
+	
+						Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+					else
+						if Victim ~= nil then
+							Victim = nil
+	
+							Notify("Unlocked!")
+						end
+					end
+				else
+					Notify("Aimlock is not enabled!")
+				end
+			end
+			if k == SelectedDisableKey then
+				AimlockState = not AimlockState
+			end
+		end)
+	
+		--// Loop update FOV and loop camera lock onto target
+	
+		RS.RenderStepped:Connect(function()
+			update()
+			if AimlockState == true then
+				if Victim ~= nil then
+					Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+				end
+			end
+		end)
+		while wait() do
+			if getgenv().AutoPrediction == true then
+				local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+				local split = string.split(pingvalue,'(')
+				local ping = tonumber(split[1])
+				if ping < 225 then
+					getgenv().Prediction = 1.4
+				elseif ping < 215 then
+					getgenv().Prediction = 1.2
+				elseif ping < 205 then
+					getgenv().Prediction = 1.0
+				elseif ping < 190 then
+					getgenv().Prediction = 0.10
+				elseif ping < 180 then
+					getgenv().Prediction = 0.12
+				elseif ping < 170 then
+					getgenv().Prediction = 0.15
+				elseif ping < 160 then
+					getgenv().Prediction = 0.18
+				elseif ping < 150 then
+					getgenv().Prediction = 0.110
+				elseif ping < 140 then
+					getgenv().Prediction = 0.113
+				elseif ping < 130 then
+					getgenv().Prediction = 0.116
+				elseif ping < 120 then
+					getgenv().Prediction = 0.120
+				elseif ping < 110 then
+					getgenv().Prediction = 0.124
+				elseif ping < 105 then
+					getgenv().Prediction = 0.127
+				elseif ping < 90 then
+					getgenv().Prediction = 0.130
+				elseif ping < 80 then
+					getgenv().Prediction = 0.133
+				elseif ping < 70 then
+					getgenv().Prediction = 0.136
+				elseif ping < 60 then
+					getgenv().Prediction = 0.15038
+				elseif ping < 50 then
+					getgenv().Prediction = 0.15038
+				elseif ping < 40 then
+					getgenv().Prediction = 0.145
+				elseif ping < 30 then
+					getgenv().Prediction = 0.155
+				elseif ping < 20 then
+					getgenv().Prediction = 0.157
+				end
+			end
+		end
+		
+		
+		
+		
+		
+		
+		
+	end)
+end;
+task.spawn(C_22);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.LocalScript
+local function C_29()
+local script = G2L["29"];
+	local sfx = script.Parent.Sound
+	local Button = script.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		sfx:Play()
+		-- Set the background color to a dark green
+		Button.BackgroundColor3 = Color3.fromRGB(0, 95, 11)
+	
+		-- Set the stroke color to a lighter green
+		Button.UIStroke.Color = Color3.fromRGB(0, 177, 18)
+		
+		
+		---// Function below here ->
+		
+		--gg zacke runs u
+		--Made by Zacke
+	
+		getgenv().Prediction = 0.12466
+		getgenv().AimPart = "HumanoidRootPart"
+		getgenv().Key = "v"
+		getgenv().DisableKey = "P"
+	
+		getgenv().FOV = true
+		getgenv().ShowFOV = true
+		getgenv().FOVSize = 55
+	
+		--// Variables (Service)
+	
+		local Players = game:GetService("Players")
+		local RS = game:GetService("RunService")
+		local WS = game:GetService("Workspace")
+		local GS = game:GetService("GuiService")
+		local SG = game:GetService("StarterGui")
+	
+		--// Variables (regular)
+	
+		local LP = Players.LocalPlayer
+		local Mouse = LP:GetMouse()
+		local Camera = WS.CurrentCamera
+		local GetGuiInset = GS.GetGuiInset
+	
+		local AimlockState = true
+		local Locked
+		local Victim
+	
+		local SelectedKey = getgenv().Key
+		local SelectedDisableKey = getgenv().DisableKey
+	
+		--// Notification function
+	
+		function Notify(tx)
+			SG:SetCore("SendNotification", {
+				Title = "Zacke's lock",
+				Text = tx,
+				Duration = 5
+			})
+		end
+	
+		--// Check if aimlock is loaded
+	
+		if getgenv().Loaded == true then
+			Notify("u already injected dumbass - Zacke")
+			return
+		end
+	
+		getgenv().Loaded = true
+	
+		--// FOV Circle
+	
+		local fov = Drawing.new("Circle")
+		fov.Filled = false
+		fov.Transparency = 1
+		fov.Thickness = 1
+		fov.Color = Color3.fromRGB(255, 255, 0)
+		fov.NumSides = 1000
+	
+		--// Functions
+	
+		function update()
+			if getgenv().FOV == true then
+				if fov then
+					fov.Radius = getgenv().FOVSize * 2
+					fov.Visible = getgenv().ShowFOV
+					fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+	
+					return fov
+				end
+			end
+		end
+	
+		function WTVP(arg)
+			return Camera:WorldToViewportPoint(arg)
+		end
+	
+		function WTSP(arg)
+			return Camera.WorldToScreenPoint(Camera, arg)
+		end
+	
+		function getClosest()
+			local closestPlayer
+			local shortestDistance = math.huge
+	
+			for i, v in pairs(game.Players:GetPlayers()) do
+				local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+				local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+	
+				if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+					local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+					local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+	
+					if (getgenv().FOV) then
+						if (fov.Radius > magnitude and magnitude < shortestDistance) then
+							closestPlayer = v
+							shortestDistance = magnitude
+						end
+					else
+						if (magnitude < shortestDistance) then
+							closestPlayer = v
+							shortestDistance = magnitude
+						end
+					end
+				end
+			end
+			return closestPlayer
+		end
+	
+		--// Checks if key is down
+	
+		Mouse.KeyDown:Connect(function(k)
+			SelectedKey = SelectedKey:lower()
+			SelectedDisableKey = SelectedDisableKey:lower()
+			if k == SelectedKey then
+				if AimlockState == true then
+					Locked = not Locked
+					if Locked then
+						Victim = getClosest()
+	
+						Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+					else
+						if Victim ~= nil then
+							Victim = nil
+	
+							Notify("Unlocked!")
+						end
+					end
+				else
+					Notify("Aimlock is not enabled!")
+				end
+			end
+			if k == SelectedDisableKey then
+				AimlockState = not AimlockState
+			end
+		end)
+	
+		--// Loop update FOV and loop camera lock onto target
+	
+		RS.RenderStepped:Connect(function()
+			update()
+			if AimlockState == true then
+				if Victim ~= nil then
+					Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+				end
+			end
+		end)
+		while wait() do
+			if getgenv().AutoPrediction == true then
+				local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+				local split = string.split(pingvalue,'(')
+				local ping = tonumber(split[1])
+				if ping < 225 then
+					getgenv().Prediction = 1.4
+				elseif ping < 215 then
+					getgenv().Prediction = 1.2
+				elseif ping < 205 then
+					getgenv().Prediction = 1.0
+				elseif ping < 190 then
+					getgenv().Prediction = 0.10
+				elseif ping < 180 then
+					getgenv().Prediction = 0.12
+				elseif ping < 170 then
+					getgenv().Prediction = 0.15
+				elseif ping < 160 then
+					getgenv().Prediction = 0.18
+				elseif ping < 150 then
+					getgenv().Prediction = 0.110
+				elseif ping < 140 then
+					getgenv().Prediction = 0.113
+				elseif ping < 130 then
+					getgenv().Prediction = 0.116
+				elseif ping < 120 then
+					getgenv().Prediction = 0.120
+				elseif ping < 110 then
+					getgenv().Prediction = 0.124
+				elseif ping < 105 then
+					getgenv().Prediction = 0.127
+				elseif ping < 90 then
+					getgenv().Prediction = 0.130
+				elseif ping < 80 then
+					getgenv().Prediction = 0.133
+				elseif ping < 70 then
+					getgenv().Prediction = 0.136
+				elseif ping < 60 then
+					getgenv().Prediction = 0.15038
+				elseif ping < 50 then
+					getgenv().Prediction = 0.15038
+				elseif ping < 40 then
+					getgenv().Prediction = 0.145
+				elseif ping < 30 then
+					getgenv().Prediction = 0.155
+				elseif ping < 20 then
+					getgenv().Prediction = 0.157
+				end
+			end
+		end
+		
+		
+		
+		
+		
+		
+		
+	end)
+end;
+task.spawn(C_29);
+-- StarterGui.MyLibrary.Main.LocalScript
+local function C_36()
+local script = G2L["36"];
+	local main = script.Parent
+	
+	main.Draggable = true
+	main.Selectable = true
+	main.Active = true
+end;
+task.spawn(C_36);
+
+return G2L["1"], require;
