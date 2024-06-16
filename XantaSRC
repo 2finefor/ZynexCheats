@@ -1,673 +1,676 @@
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
-
--- Instances: 75 | Scripts: 10 | Modules: 0
-local G2L = {};
+-- Instances: 82 | Scripts: 13 | Modules: 0
+local Tree = {};
 
 -- StarterGui.MyLibrary
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Name"] = [[MyLibrary]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+Tree["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+Tree["1"]["Name"] = [[MyLibrary]];
+Tree["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+Tree["1"]["ResetOnSpawn"] = false;
 
 -- StarterGui.MyLibrary.Main
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["Active"] = true;
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["2"]["Size"] = UDim2.new(0, 400, 0, 400);
-G2L["2"]["Position"] = UDim2.new(0.45293, 0, 0.2244, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Name"] = [[Main]];
+Tree["2"] = Instance.new("Frame", Tree["1"]);
+Tree["2"]["Visible"] = false;
+Tree["2"]["Active"] = true;
+Tree["2"]["BorderSizePixel"] = 0;
+Tree["2"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+Tree["2"]["Size"] = UDim2.new(0, 400, 0, 400);
+Tree["2"]["Position"] = UDim2.new(0.45293, 0, 0.2244, 0);
+Tree["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["2"]["Name"] = [[Main]];
 
 -- StarterGui.MyLibrary.Main.UICorner
-G2L["3"] = Instance.new("UICorner", G2L["2"]);
-G2L["3"]["CornerRadius"] = UDim.new(0, 9);
+Tree["3"] = Instance.new("UICorner", Tree["2"]);
+Tree["3"]["CornerRadius"] = UDim.new(0, 9);
 
 -- StarterGui.MyLibrary.Main.DropShadowHolder
-G2L["4"] = Instance.new("Frame", G2L["2"]);
-G2L["4"]["ZIndex"] = 0;
-G2L["4"]["BorderSizePixel"] = 0;
-G2L["4"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["4"]["Name"] = [[DropShadowHolder]];
-G2L["4"]["BackgroundTransparency"] = 1;
+Tree["4"] = Instance.new("Frame", Tree["2"]);
+Tree["4"]["ZIndex"] = 0;
+Tree["4"]["BorderSizePixel"] = 0;
+Tree["4"]["Size"] = UDim2.new(1, 0, 1, 0);
+Tree["4"]["Name"] = [[DropShadowHolder]];
+Tree["4"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.MyLibrary.Main.DropShadowHolder.DropShadow
-G2L["5"] = Instance.new("ImageLabel", G2L["4"]);
-G2L["5"]["ZIndex"] = 0;
-G2L["5"]["BorderSizePixel"] = 0;
-G2L["5"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
-G2L["5"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["5"]["ImageTransparency"] = 0.5;
-G2L["5"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["5"]["Image"] = [[rbxassetid://6014261993]];
-G2L["5"]["Size"] = UDim2.new(1, 47, 1, 47);
-G2L["5"]["BackgroundTransparency"] = 1;
-G2L["5"]["Name"] = [[DropShadow]];
-G2L["5"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+Tree["5"] = Instance.new("ImageLabel", Tree["4"]);
+Tree["5"]["ZIndex"] = 0;
+Tree["5"]["BorderSizePixel"] = 0;
+Tree["5"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
+Tree["5"]["ScaleType"] = Enum.ScaleType.Slice;
+Tree["5"]["ImageTransparency"] = 0.5;
+Tree["5"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Tree["5"]["Image"] = [[rbxassetid://6014261993]];
+Tree["5"]["Size"] = UDim2.new(1, 47, 1, 47);
+Tree["5"]["BackgroundTransparency"] = 1;
+Tree["5"]["Name"] = [[DropShadow]];
+Tree["5"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 -- StarterGui.MyLibrary.Main.Topbar
-G2L["6"] = Instance.new("Frame", G2L["2"]);
-G2L["6"]["BorderSizePixel"] = 0;
-G2L["6"]["BackgroundColor3"] = Color3.fromRGB(181, 40, 12);
-G2L["6"]["Size"] = UDim2.new(0, 400, 0, 41);
-G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["Name"] = [[Topbar]];
+Tree["6"] = Instance.new("Frame", Tree["2"]);
+Tree["6"]["BorderSizePixel"] = 0;
+Tree["6"]["BackgroundColor3"] = Color3.fromRGB(46, 2, 3);
+Tree["6"]["Size"] = UDim2.new(0, 400, 0, 41);
+Tree["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["6"]["Name"] = [[Topbar]];
 
 -- StarterGui.MyLibrary.Main.Topbar.UICorner
-G2L["7"] = Instance.new("UICorner", G2L["6"]);
-G2L["7"]["CornerRadius"] = UDim.new(0, 9);
+Tree["7"] = Instance.new("UICorner", Tree["6"]);
+Tree["7"]["CornerRadius"] = UDim.new(0, 9);
 
 -- StarterGui.MyLibrary.Main.Topbar.Weurd
-G2L["8"] = Instance.new("Frame", G2L["6"]);
-G2L["8"]["BorderSizePixel"] = 0;
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(181, 40, 12);
-G2L["8"]["Size"] = UDim2.new(0, 400, 0, 22);
-G2L["8"]["Position"] = UDim2.new(0, 0, 0.46341, 0);
-G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Name"] = [[Weurd]];
+Tree["8"] = Instance.new("Frame", Tree["6"]);
+Tree["8"]["BorderSizePixel"] = 0;
+Tree["8"]["BackgroundColor3"] = Color3.fromRGB(46, 2, 3);
+Tree["8"]["Size"] = UDim2.new(0, 400, 0, 22);
+Tree["8"]["Position"] = UDim2.new(0, 0, 0.46341, 0);
+Tree["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["8"]["Name"] = [[Weurd]];
 
 -- StarterGui.MyLibrary.Main.Topbar.Weurd.Frame
-G2L["9"] = Instance.new("Frame", G2L["8"]);
-G2L["9"]["BorderSizePixel"] = 0;
-G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9"]["Size"] = UDim2.new(0, 400, 0, 1);
-G2L["9"]["Position"] = UDim2.new(0, 0, 1, 0);
-G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["9"] = Instance.new("Frame", Tree["8"]);
+Tree["9"]["BorderSizePixel"] = 0;
+Tree["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["9"]["Size"] = UDim2.new(0, 400, 0, 1);
+Tree["9"]["Position"] = UDim2.new(0, 0, 1, 0);
+Tree["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 -- StarterGui.MyLibrary.Main.Topbar.Title
-G2L["a"] = Instance.new("TextLabel", G2L["6"]);
-G2L["a"]["TextWrapped"] = true;
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["TextScaled"] = true;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a"]["TextSize"] = 14;
-G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["a"]["TextColor3"] = Color3.fromRGB(255, 250, 250);
-G2L["a"]["BackgroundTransparency"] = 1;
-G2L["a"]["Size"] = UDim2.new(0, 176, 0, 35);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[]];
-G2L["a"]["Name"] = [[Title]];
-G2L["a"]["Position"] = UDim2.new(0, 0, 0.07317, 0);
+Tree["a"] = Instance.new("TextLabel", Tree["6"]);
+Tree["a"]["TextWrapped"] = true;
+Tree["a"]["BorderSizePixel"] = 0;
+Tree["a"]["TextScaled"] = true;
+Tree["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["a"]["TextSize"] = 14;
+Tree["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Tree["a"]["TextColor3"] = Color3.fromRGB(255, 250, 250);
+Tree["a"]["BackgroundTransparency"] = 1;
+Tree["a"]["Size"] = UDim2.new(0, 176, 0, 35);
+Tree["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["a"]["Text"] = [[]];
+Tree["a"]["Name"] = [[Title]];
+Tree["a"]["Position"] = UDim2.new(0, 0, 0.07317, 0);
 
--- StarterGui.MyLibrary.Main.Topbar.Title.VersionPaid
-G2L["b"] = Instance.new("TextLabel", G2L["a"]);
-G2L["b"]["TextWrapped"] = true;
-G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["TextScaled"] = true;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["b"]["TextSize"] = 14;
-G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["b"]["BackgroundTransparency"] = 1;
-G2L["b"]["Size"] = UDim2.new(0, 111, 0, 19);
-G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Text"] = [[-     V1.12   PAID]];
-G2L["b"]["Name"] = [[VersionPaid]];
-G2L["b"]["Position"] = UDim2.new(0.75568, 0, 0.22857, 0);
+-- StarterGui.MyLibrary.Main.Topbar.Title.LocalScript
+Tree["b"] = Instance.new("LocalScript", Tree["a"]);
 
--- StarterGui.MyLibrary.Main.Navigation
-G2L["c"] = Instance.new("Frame", G2L["2"]);
-G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c"]["Size"] = UDim2.new(0, 384, 0, 42);
-G2L["c"]["Position"] = UDim2.new(0.0175, 0, 0.1275, 0);
-G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c"]["Name"] = [[Navigation]];
-G2L["c"]["BackgroundTransparency"] = 1;
 
--- StarterGui.MyLibrary.Main.Navigation.Aimbot
-G2L["d"] = Instance.new("TextButton", G2L["c"]);
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["TextSize"] = 14;
-G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["d"]["ZIndex"] = 4;
-G2L["d"]["Size"] = UDim2.new(0, 121, 0, 30);
-G2L["d"]["Name"] = [[Aimbot]];
-G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["Text"] = [[AIMBOT]];
-G2L["d"]["Position"] = UDim2.new(0.07031, 0, 0.11905, 0);
+-- StarterGui.MyLibrary.Main.Topbar.Minimize
+Tree["c"] = Instance.new("ImageButton", Tree["6"]);
+Tree["c"]["BorderSizePixel"] = 0;
+Tree["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["c"]["Image"] = [[rbxassetid://10734895530]];
+Tree["c"]["Size"] = UDim2.new(0, 25, 0, 25);
+Tree["c"]["BackgroundTransparency"] = 1;
+Tree["c"]["Name"] = [[Minimize]];
+Tree["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["c"]["Position"] = UDim2.new(0.89, 0, 0.19512, 0);
 
--- StarterGui.MyLibrary.Main.Navigation.Aimbot.UICorner
-G2L["e"] = Instance.new("UICorner", G2L["d"]);
-G2L["e"]["CornerRadius"] = UDim.new(0, 9);
+-- StarterGui.MyLibrary.Main.Topbar.Minimize.LocalScript
+Tree["d"] = Instance.new("LocalScript", Tree["c"]);
 
--- StarterGui.MyLibrary.Main.Navigation.Aimbot.ToggleAimbotTab
-G2L["f"] = Instance.new("LocalScript", G2L["d"]);
-G2L["f"]["Name"] = [[ToggleAimbotTab]];
-
--- StarterGui.MyLibrary.Main.Navigation.Aimbot.Sound
-G2L["10"] = Instance.new("Sound", G2L["d"]);
-G2L["10"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["10"]["SoundId"] = [[rbxassetid://7107162229]];
-
--- StarterGui.MyLibrary.Main.Navigation.Visuals
-G2L["11"] = Instance.new("TextButton", G2L["c"]);
-G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["TextSize"] = 14;
-G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["11"]["ZIndex"] = 4;
-G2L["11"]["Size"] = UDim2.new(0, 121, 0, 30);
-G2L["11"]["Name"] = [[Visuals]];
-G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["Text"] = [[Visuals]];
-G2L["11"]["Position"] = UDim2.new(0.34375, 0, 0.11905, 0);
-
--- StarterGui.MyLibrary.Main.Navigation.Visuals.UICorner
-G2L["12"] = Instance.new("UICorner", G2L["11"]);
-G2L["12"]["CornerRadius"] = UDim.new(0, 9);
-
--- StarterGui.MyLibrary.Main.Navigation.Visuals.ToggleVisualsTab
-G2L["13"] = Instance.new("LocalScript", G2L["11"]);
-G2L["13"]["Name"] = [[ToggleVisualsTab]];
-
--- StarterGui.MyLibrary.Main.Navigation.Visuals.Sound
-G2L["14"] = Instance.new("Sound", G2L["11"]);
-G2L["14"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["14"]["SoundId"] = [[rbxassetid://7107162229]];
-
--- StarterGui.MyLibrary.Main.Navigation.Credits
-G2L["15"] = Instance.new("TextButton", G2L["c"]);
-G2L["15"]["BorderSizePixel"] = 0;
-G2L["15"]["TextSize"] = 14;
-G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["15"]["ZIndex"] = 4;
-G2L["15"]["Size"] = UDim2.new(0, 121, 0, 30);
-G2L["15"]["Name"] = [[Credits]];
-G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15"]["Text"] = [[Credits]];
-G2L["15"]["Position"] = UDim2.new(0.61719, 0, 0.11905, 0);
-
--- StarterGui.MyLibrary.Main.Navigation.Credits.UICorner
-G2L["16"] = Instance.new("UICorner", G2L["15"]);
-G2L["16"]["CornerRadius"] = UDim.new(0, 9);
-
--- StarterGui.MyLibrary.Main.Navigation.Credits.ToggleCreditsTab
-G2L["17"] = Instance.new("LocalScript", G2L["15"]);
-G2L["17"]["Name"] = [[ToggleCreditsTab]];
-
--- StarterGui.MyLibrary.Main.Navigation.Credits.Sound
-G2L["18"] = Instance.new("Sound", G2L["15"]);
-G2L["18"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["18"]["SoundId"] = [[rbxassetid://7107162229]];
-
--- StarterGui.MyLibrary.Main.Navigation.Frame
-G2L["19"] = Instance.new("Frame", G2L["c"]);
-G2L["19"]["BorderSizePixel"] = 0;
-G2L["19"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
-G2L["19"]["Size"] = UDim2.new(0, 331, 0, 15);
-G2L["19"]["Position"] = UDim2.new(0.07031, 0, 0.66667, 0);
-G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 -- StarterGui.MyLibrary.Main.ContentContainer
-G2L["1a"] = Instance.new("Frame", G2L["2"]);
-G2L["1a"]["Visible"] = false;
-G2L["1a"]["Active"] = true;
-G2L["1a"]["ZIndex"] = 5;
-G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
-G2L["1a"]["Size"] = UDim2.new(0, 331, 0, 282);
-G2L["1a"]["Position"] = UDim2.new(0.0825, 0, 0.235, 0);
-G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Name"] = [[ContentContainer]];
+Tree["e"] = Instance.new("Frame", Tree["2"]);
+Tree["e"]["Active"] = true;
+Tree["e"]["ZIndex"] = 5;
+Tree["e"]["BorderSizePixel"] = 0;
+Tree["e"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+Tree["e"]["Size"] = UDim2.new(0, 331, 0, 324);
+Tree["e"]["Position"] = UDim2.new(0.0825, 0, 0.13, 0);
+Tree["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["e"]["Name"] = [[ContentContainer]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.UICorner
-G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
-G2L["1b"]["CornerRadius"] = UDim.new(0, 9);
+Tree["f"] = Instance.new("UICorner", Tree["e"]);
+Tree["f"]["CornerRadius"] = UDim.new(0, 9);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab
-G2L["1c"] = Instance.new("Frame", G2L["1a"]);
-G2L["1c"]["Visible"] = false;
-G2L["1c"]["Active"] = true;
-G2L["1c"]["BorderSizePixel"] = 0;
-G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1c"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Name"] = [[AimbotTab]];
-G2L["1c"]["BackgroundTransparency"] = 1;
+Tree["10"] = Instance.new("Frame", Tree["e"]);
+Tree["10"]["Visible"] = false;
+Tree["10"]["Active"] = true;
+Tree["10"]["BorderSizePixel"] = 0;
+Tree["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["10"]["Size"] = UDim2.new(1, 0, 1, 0);
+Tree["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["10"]["Name"] = [[AimbotTab]];
+Tree["10"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn
-G2L["1d"] = Instance.new("TextButton", G2L["1c"]);
-G2L["1d"]["BorderSizePixel"] = 0;
-G2L["1d"]["TextSize"] = 14;
-G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
-G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1d"]["Size"] = UDim2.new(0, 275, 0, 30);
-G2L["1d"]["Name"] = [[AimbotBtn]];
-G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1d"]["Text"] = [[Aimlock]];
-G2L["1d"]["Position"] = UDim2.new(0, 30, 0, 20);
+Tree["11"] = Instance.new("TextButton", Tree["10"]);
+Tree["11"]["BorderSizePixel"] = 0;
+Tree["11"]["TextSize"] = 14;
+Tree["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["11"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+Tree["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["11"]["Size"] = UDim2.new(0, 275, 0, 30);
+Tree["11"]["Name"] = [[AimbotBtn]];
+Tree["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["11"]["Text"] = [[Aimlock]];
+Tree["11"]["Position"] = UDim2.new(0, 30, 0, 20);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.UICorner
-G2L["1e"] = Instance.new("UICorner", G2L["1d"]);
-G2L["1e"]["CornerRadius"] = UDim.new(0, 9);
+Tree["12"] = Instance.new("UICorner", Tree["11"]);
+Tree["12"]["CornerRadius"] = UDim.new(0, 9);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.UIStroke
-G2L["1f"] = Instance.new("UIStroke", G2L["1d"]);
-G2L["1f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["1f"]["Color"] = Color3.fromRGB(214, 44, 44);
+Tree["13"] = Instance.new("UIStroke", Tree["11"]);
+Tree["13"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Tree["13"]["Color"] = Color3.fromRGB(214, 44, 44);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.Icon
-G2L["20"] = Instance.new("ImageLabel", G2L["1d"]);
-G2L["20"]["BorderSizePixel"] = 0;
-G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["20"]["Image"] = [[rbxassetid://10723405649]];
-G2L["20"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20"]["BackgroundTransparency"] = 1;
-G2L["20"]["Name"] = [[Icon]];
-G2L["20"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+Tree["14"] = Instance.new("ImageLabel", Tree["11"]);
+Tree["14"]["BorderSizePixel"] = 0;
+Tree["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["14"]["Image"] = [[rbxassetid://10723405649]];
+Tree["14"]["Size"] = UDim2.new(0, 20, 0, 20);
+Tree["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["14"]["BackgroundTransparency"] = 1;
+Tree["14"]["Name"] = [[Icon]];
+Tree["14"]["Position"] = UDim2.new(1.3, 0, 0, 5);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.UIPadding
-G2L["21"] = Instance.new("UIPadding", G2L["1d"]);
-G2L["21"]["PaddingRight"] = UDim.new(0, 100);
+Tree["15"] = Instance.new("UIPadding", Tree["11"]);
+Tree["15"]["PaddingRight"] = UDim.new(0, 100);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.LocalScript
-G2L["22"] = Instance.new("LocalScript", G2L["1d"]);
+Tree["16"] = Instance.new("LocalScript", Tree["11"]);
 
 
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.Sound
-G2L["23"] = Instance.new("Sound", G2L["1d"]);
-G2L["23"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["23"]["SoundId"] = [[rbxassetid://7107162229]];
+Tree["17"] = Instance.new("Sound", Tree["11"]);
+Tree["17"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+Tree["17"]["SoundId"] = [[rbxassetid://7107162229]];
 
--- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV
-G2L["24"] = Instance.new("TextButton", G2L["1c"]);
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["TextSize"] = 14;
-G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
-G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["24"]["Size"] = UDim2.new(0, 275, 0, 30);
-G2L["24"]["Name"] = [[FOV]];
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Text"] = [[Show FOV]];
-G2L["24"]["Position"] = UDim2.new(0, 30, 0, 60);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.Hitbox
+Tree["18"] = Instance.new("TextButton", Tree["10"]);
+Tree["18"]["BorderSizePixel"] = 0;
+Tree["18"]["TextSize"] = 14;
+Tree["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["18"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+Tree["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["18"]["Size"] = UDim2.new(0, 275, 0, 30);
+Tree["18"]["Name"] = [[Hitbox]];
+Tree["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["18"]["Text"] = [[Hitbox Extender]];
+Tree["18"]["Position"] = UDim2.new(0, 30, 0, 60);
 
--- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.UICorner
-G2L["25"] = Instance.new("UICorner", G2L["24"]);
-G2L["25"]["CornerRadius"] = UDim.new(0, 9);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.Hitbox.UICorner
+Tree["19"] = Instance.new("UICorner", Tree["18"]);
+Tree["19"]["CornerRadius"] = UDim.new(0, 9);
 
--- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.UIPadding
-G2L["26"] = Instance.new("UIPadding", G2L["24"]);
-G2L["26"]["PaddingRight"] = UDim.new(0, 100);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.Hitbox.UIPadding
+Tree["1a"] = Instance.new("UIPadding", Tree["18"]);
+Tree["1a"]["PaddingRight"] = UDim.new(0, 100);
 
--- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.UIStroke
-G2L["27"] = Instance.new("UIStroke", G2L["24"]);
-G2L["27"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["27"]["Color"] = Color3.fromRGB(214, 44, 44);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.Hitbox.UIStroke
+Tree["1b"] = Instance.new("UIStroke", Tree["18"]);
+Tree["1b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Tree["1b"]["Color"] = Color3.fromRGB(214, 44, 44);
 
--- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.Icon
-G2L["28"] = Instance.new("ImageLabel", G2L["24"]);
-G2L["28"]["BorderSizePixel"] = 0;
-G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["28"]["Image"] = [[rbxassetid://10723405649]];
-G2L["28"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["28"]["BackgroundTransparency"] = 1;
-G2L["28"]["Name"] = [[Icon]];
-G2L["28"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.Hitbox.Icon
+Tree["1c"] = Instance.new("ImageLabel", Tree["18"]);
+Tree["1c"]["BorderSizePixel"] = 0;
+Tree["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["1c"]["Image"] = [[rbxassetid://10723405649]];
+Tree["1c"]["Size"] = UDim2.new(0, 20, 0, 20);
+Tree["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["1c"]["BackgroundTransparency"] = 1;
+Tree["1c"]["Name"] = [[Icon]];
+Tree["1c"]["Position"] = UDim2.new(1.3, 0, 0, 5);
 
--- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.LocalScript
-G2L["29"] = Instance.new("LocalScript", G2L["24"]);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.Hitbox.LocalScript
+Tree["1d"] = Instance.new("LocalScript", Tree["18"]);
 
 
--- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.Sound
-G2L["2a"] = Instance.new("Sound", G2L["24"]);
-G2L["2a"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["2a"]["SoundId"] = [[rbxassetid://7107162229]];
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.Hitbox.Sound
+Tree["1e"] = Instance.new("Sound", Tree["18"]);
+Tree["1e"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+Tree["1e"]["SoundId"] = [[rbxassetid://7107162229]];
 
--- StarterGui.MyLibrary.Main.ContentContainer.Detail
-G2L["2b"] = Instance.new("Frame", G2L["1a"]);
-G2L["2b"]["Visible"] = false;
-G2L["2b"]["Active"] = true;
-G2L["2b"]["BorderSizePixel"] = 0;
-G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
-G2L["2b"]["Size"] = UDim2.new(0, 331, 0, 29);
-G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["Name"] = [[Detail]];
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.SilentAim
+Tree["1f"] = Instance.new("TextButton", Tree["10"]);
+Tree["1f"]["BorderSizePixel"] = 0;
+Tree["1f"]["TextSize"] = 14;
+Tree["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["1f"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+Tree["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["1f"]["Size"] = UDim2.new(0, 275, 0, 30);
+Tree["1f"]["Name"] = [[SilentAim]];
+Tree["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["1f"]["Text"] = [[Silent Aim]];
+Tree["1f"]["Position"] = UDim2.new(0, 30, 0, 100);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.SilentAim.UICorner
+Tree["20"] = Instance.new("UICorner", Tree["1f"]);
+Tree["20"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.SilentAim.UIPadding
+Tree["21"] = Instance.new("UIPadding", Tree["1f"]);
+Tree["21"]["PaddingRight"] = UDim.new(0, 100);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.SilentAim.UIStroke
+Tree["22"] = Instance.new("UIStroke", Tree["1f"]);
+Tree["22"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Tree["22"]["Color"] = Color3.fromRGB(214, 44, 44);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.SilentAim.Icon
+Tree["23"] = Instance.new("ImageLabel", Tree["1f"]);
+Tree["23"]["BorderSizePixel"] = 0;
+Tree["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["23"]["Image"] = [[rbxassetid://10723405649]];
+Tree["23"]["Size"] = UDim2.new(0, 20, 0, 20);
+Tree["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["23"]["BackgroundTransparency"] = 1;
+Tree["23"]["Name"] = [[Icon]];
+Tree["23"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.SilentAim.LocalScript
+Tree["24"] = Instance.new("LocalScript", Tree["1f"]);
+
+
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.SilentAim.Sound
+Tree["25"] = Instance.new("Sound", Tree["1f"]);
+Tree["25"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+Tree["25"]["SoundId"] = [[rbxassetid://7107162229]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab
-G2L["2c"] = Instance.new("Frame", G2L["1a"]);
-G2L["2c"]["Visible"] = false;
-G2L["2c"]["Active"] = true;
-G2L["2c"]["BorderSizePixel"] = 0;
-G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2c"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2c"]["Name"] = [[VisualTab]];
-G2L["2c"]["BackgroundTransparency"] = 1;
+Tree["26"] = Instance.new("Frame", Tree["e"]);
+Tree["26"]["Visible"] = false;
+Tree["26"]["Active"] = true;
+Tree["26"]["BorderSizePixel"] = 0;
+Tree["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["26"]["Size"] = UDim2.new(1, 0, 1, 0);
+Tree["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["26"]["Name"] = [[VisualTab]];
+Tree["26"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams
-G2L["2d"] = Instance.new("TextButton", G2L["2c"]);
-G2L["2d"]["BorderSizePixel"] = 0;
-G2L["2d"]["TextSize"] = 14;
-G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
-G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2d"]["Size"] = UDim2.new(0, 275, 0, 30);
-G2L["2d"]["Name"] = [[Chams]];
-G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2d"]["Text"] = [[Chams]];
-G2L["2d"]["Position"] = UDim2.new(0, 30, 0, 20);
+Tree["27"] = Instance.new("TextButton", Tree["26"]);
+Tree["27"]["BorderSizePixel"] = 0;
+Tree["27"]["TextSize"] = 14;
+Tree["27"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["27"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+Tree["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["27"]["Size"] = UDim2.new(0, 275, 0, 30);
+Tree["27"]["Name"] = [[Chams]];
+Tree["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["27"]["Text"] = [[Chams]];
+Tree["27"]["Position"] = UDim2.new(0, 30, 0, 20);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.UICorner
-G2L["2e"] = Instance.new("UICorner", G2L["2d"]);
-G2L["2e"]["CornerRadius"] = UDim.new(0, 9);
+Tree["28"] = Instance.new("UICorner", Tree["27"]);
+Tree["28"]["CornerRadius"] = UDim.new(0, 9);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.UIStroke
-G2L["2f"] = Instance.new("UIStroke", G2L["2d"]);
-G2L["2f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["2f"]["Color"] = Color3.fromRGB(214, 44, 44);
+Tree["29"] = Instance.new("UIStroke", Tree["27"]);
+Tree["29"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Tree["29"]["Color"] = Color3.fromRGB(214, 44, 44);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.Icon
-G2L["30"] = Instance.new("ImageLabel", G2L["2d"]);
-G2L["30"]["BorderSizePixel"] = 0;
-G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["Image"] = [[rbxassetid://10723405649]];
-G2L["30"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["BackgroundTransparency"] = 1;
-G2L["30"]["Name"] = [[Icon]];
-G2L["30"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+Tree["2a"] = Instance.new("ImageLabel", Tree["27"]);
+Tree["2a"]["BorderSizePixel"] = 0;
+Tree["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["2a"]["Image"] = [[rbxassetid://10723405649]];
+Tree["2a"]["Size"] = UDim2.new(0, 20, 0, 20);
+Tree["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["2a"]["BackgroundTransparency"] = 1;
+Tree["2a"]["Name"] = [[Icon]];
+Tree["2a"]["Position"] = UDim2.new(1.3, 0, 0, 5);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.UIPadding
-G2L["31"] = Instance.new("UIPadding", G2L["2d"]);
-G2L["31"]["PaddingRight"] = UDim.new(0, 100);
+Tree["2b"] = Instance.new("UIPadding", Tree["27"]);
+Tree["2b"]["PaddingRight"] = UDim.new(0, 100);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.LocalScript
-G2L["32"] = Instance.new("LocalScript", G2L["2d"]);
+Tree["2c"] = Instance.new("LocalScript", Tree["27"]);
 
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.Sound
-G2L["33"] = Instance.new("Sound", G2L["2d"]);
-G2L["33"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["33"]["SoundId"] = [[rbxassetid://7107162229]];
+Tree["2d"] = Instance.new("Sound", Tree["27"]);
+Tree["2d"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+Tree["2d"]["SoundId"] = [[rbxassetid://7107162229]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP
-G2L["34"] = Instance.new("TextButton", G2L["2c"]);
-G2L["34"]["BorderSizePixel"] = 0;
-G2L["34"]["TextSize"] = 14;
-G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
-G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["34"]["Size"] = UDim2.new(0, 275, 0, 30);
-G2L["34"]["Name"] = [[Name ESP]];
-G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["34"]["Text"] = [[Name ESP]];
-G2L["34"]["Position"] = UDim2.new(0, 30, 0, 60);
+Tree["2e"] = Instance.new("TextButton", Tree["26"]);
+Tree["2e"]["BorderSizePixel"] = 0;
+Tree["2e"]["TextSize"] = 14;
+Tree["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["2e"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+Tree["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["2e"]["Size"] = UDim2.new(0, 275, 0, 30);
+Tree["2e"]["Name"] = [[Name ESP]];
+Tree["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["2e"]["Text"] = [[Name ESP]];
+Tree["2e"]["Position"] = UDim2.new(0, 30, 0, 60);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.UICorner
-G2L["35"] = Instance.new("UICorner", G2L["34"]);
-G2L["35"]["CornerRadius"] = UDim.new(0, 9);
+Tree["2f"] = Instance.new("UICorner", Tree["2e"]);
+Tree["2f"]["CornerRadius"] = UDim.new(0, 9);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.UIPadding
-G2L["36"] = Instance.new("UIPadding", G2L["34"]);
-G2L["36"]["PaddingRight"] = UDim.new(0, 100);
+Tree["30"] = Instance.new("UIPadding", Tree["2e"]);
+Tree["30"]["PaddingRight"] = UDim.new(0, 100);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.UIStroke
-G2L["37"] = Instance.new("UIStroke", G2L["34"]);
-G2L["37"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["37"]["Color"] = Color3.fromRGB(214, 44, 44);
+Tree["31"] = Instance.new("UIStroke", Tree["2e"]);
+Tree["31"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Tree["31"]["Color"] = Color3.fromRGB(214, 44, 44);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.Icon
-G2L["38"] = Instance.new("ImageLabel", G2L["34"]);
-G2L["38"]["BorderSizePixel"] = 0;
-G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["38"]["Image"] = [[rbxassetid://10723405649]];
-G2L["38"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["38"]["BackgroundTransparency"] = 1;
-G2L["38"]["Name"] = [[Icon]];
-G2L["38"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+Tree["32"] = Instance.new("ImageLabel", Tree["2e"]);
+Tree["32"]["BorderSizePixel"] = 0;
+Tree["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["32"]["Image"] = [[rbxassetid://10723405649]];
+Tree["32"]["Size"] = UDim2.new(0, 20, 0, 20);
+Tree["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["32"]["BackgroundTransparency"] = 1;
+Tree["32"]["Name"] = [[Icon]];
+Tree["32"]["Position"] = UDim2.new(1.3, 0, 0, 5);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.LocalScript
-G2L["39"] = Instance.new("LocalScript", G2L["34"]);
+Tree["33"] = Instance.new("LocalScript", Tree["2e"]);
 
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.Sound
-G2L["3a"] = Instance.new("Sound", G2L["34"]);
-G2L["3a"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["3a"]["SoundId"] = [[rbxassetid://7107162229]];
+Tree["34"] = Instance.new("Sound", Tree["2e"]);
+Tree["34"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+Tree["34"]["SoundId"] = [[rbxassetid://7107162229]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers
-G2L["3b"] = Instance.new("TextButton", G2L["2c"]);
-G2L["3b"]["BorderSizePixel"] = 0;
-G2L["3b"]["TextSize"] = 14;
-G2L["3b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
-G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["3b"]["Size"] = UDim2.new(0, 275, 0, 30);
-G2L["3b"]["Name"] = [[Tracers]];
-G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3b"]["Text"] = [[Tracers]];
-G2L["3b"]["Position"] = UDim2.new(0, 30, 0, 100);
+Tree["35"] = Instance.new("TextButton", Tree["26"]);
+Tree["35"]["BorderSizePixel"] = 0;
+Tree["35"]["TextSize"] = 14;
+Tree["35"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["35"]["BackgroundColor3"] = Color3.fromRGB(96, 20, 20);
+Tree["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["35"]["Size"] = UDim2.new(0, 275, 0, 30);
+Tree["35"]["Name"] = [[Tracers]];
+Tree["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["35"]["Text"] = [[Tracers]];
+Tree["35"]["Position"] = UDim2.new(0, 30, 0, 100);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.UICorner
-G2L["3c"] = Instance.new("UICorner", G2L["3b"]);
-G2L["3c"]["CornerRadius"] = UDim.new(0, 9);
+Tree["36"] = Instance.new("UICorner", Tree["35"]);
+Tree["36"]["CornerRadius"] = UDim.new(0, 9);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.UIPadding
-G2L["3d"] = Instance.new("UIPadding", G2L["3b"]);
-G2L["3d"]["PaddingRight"] = UDim.new(0, 100);
+Tree["37"] = Instance.new("UIPadding", Tree["35"]);
+Tree["37"]["PaddingRight"] = UDim.new(0, 100);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.UIStroke
-G2L["3e"] = Instance.new("UIStroke", G2L["3b"]);
-G2L["3e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["3e"]["Color"] = Color3.fromRGB(214, 44, 44);
+Tree["38"] = Instance.new("UIStroke", Tree["35"]);
+Tree["38"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Tree["38"]["Color"] = Color3.fromRGB(214, 44, 44);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.Icon
-G2L["3f"] = Instance.new("ImageLabel", G2L["3b"]);
-G2L["3f"]["BorderSizePixel"] = 0;
-G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3f"]["Image"] = [[rbxassetid://10723405649]];
-G2L["3f"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3f"]["BackgroundTransparency"] = 1;
-G2L["3f"]["Name"] = [[Icon]];
-G2L["3f"]["Position"] = UDim2.new(1.3, 0, 0, 5);
+Tree["39"] = Instance.new("ImageLabel", Tree["35"]);
+Tree["39"]["BorderSizePixel"] = 0;
+Tree["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["39"]["Image"] = [[rbxassetid://10723405649]];
+Tree["39"]["Size"] = UDim2.new(0, 20, 0, 20);
+Tree["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["39"]["BackgroundTransparency"] = 1;
+Tree["39"]["Name"] = [[Icon]];
+Tree["39"]["Position"] = UDim2.new(1.3, 0, 0, 5);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.LocalScript
-G2L["40"] = Instance.new("LocalScript", G2L["3b"]);
+Tree["3a"] = Instance.new("LocalScript", Tree["35"]);
 
 
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.Sound
-G2L["41"] = Instance.new("Sound", G2L["3b"]);
-G2L["41"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["41"]["SoundId"] = [[rbxassetid://7107162229]];
+Tree["3b"] = Instance.new("Sound", Tree["35"]);
+Tree["3b"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+Tree["3b"]["SoundId"] = [[rbxassetid://7107162229]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab
-G2L["42"] = Instance.new("Frame", G2L["1a"]);
-G2L["42"]["Visible"] = false;
-G2L["42"]["Active"] = true;
-G2L["42"]["BorderSizePixel"] = 0;
-G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["42"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["42"]["Name"] = [[CreditTab]];
-G2L["42"]["BackgroundTransparency"] = 1;
+Tree["3c"] = Instance.new("Frame", Tree["e"]);
+Tree["3c"]["Visible"] = false;
+Tree["3c"]["Active"] = true;
+Tree["3c"]["BorderSizePixel"] = 0;
+Tree["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["3c"]["Size"] = UDim2.new(1, 0, 1, 0);
+Tree["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["3c"]["Name"] = [[CreditTab]];
+Tree["3c"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title
-G2L["43"] = Instance.new("TextLabel", G2L["42"]);
-G2L["43"]["TextWrapped"] = true;
-G2L["43"]["BorderSizePixel"] = 0;
-G2L["43"]["TextScaled"] = true;
-G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["43"]["TextSize"] = 14;
-G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["43"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["43"]["BackgroundTransparency"] = 1;
-G2L["43"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["43"]["Text"] = [[CREDITS]];
-G2L["43"]["Name"] = [[Title]];
+Tree["3d"] = Instance.new("TextLabel", Tree["3c"]);
+Tree["3d"]["TextWrapped"] = true;
+Tree["3d"]["BorderSizePixel"] = 0;
+Tree["3d"]["TextScaled"] = true;
+Tree["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["3d"]["TextSize"] = 14;
+Tree["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["3d"]["BackgroundTransparency"] = 1;
+Tree["3d"]["Size"] = UDim2.new(1, 0, 1, 0);
+Tree["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["3d"]["Text"] = [[CREDITS]];
+Tree["3d"]["Name"] = [[Title]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.UIPadding
-G2L["44"] = Instance.new("UIPadding", G2L["43"]);
-G2L["44"]["PaddingBottom"] = UDim.new(0, 250);
+Tree["3e"] = Instance.new("UIPadding", Tree["3d"]);
+Tree["3e"]["PaddingBottom"] = UDim.new(0, 250);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Owner
-G2L["45"] = Instance.new("TextLabel", G2L["43"]);
-G2L["45"]["TextWrapped"] = true;
-G2L["45"]["BorderSizePixel"] = 0;
-G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["TextSize"] = 24;
-G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["BackgroundTransparency"] = 1;
-G2L["45"]["RichText"] = true;
-G2L["45"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Text"] = [[Scripts : Xanta ]];
-G2L["45"]["Name"] = [[Owner]];
+Tree["3f"] = Instance.new("TextLabel", Tree["3d"]);
+Tree["3f"]["TextWrapped"] = true;
+Tree["3f"]["BorderSizePixel"] = 0;
+Tree["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["3f"]["TextSize"] = 24;
+Tree["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["3f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["3f"]["BackgroundTransparency"] = 1;
+Tree["3f"]["RichText"] = true;
+Tree["3f"]["Size"] = UDim2.new(1, 0, 1, 0);
+Tree["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["3f"]["Text"] = [[Scripts : Xanta ]];
+Tree["3f"]["Name"] = [[Owner]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Owner.UIPadding
-G2L["46"] = Instance.new("UIPadding", G2L["45"]);
-G2L["46"]["PaddingTop"] = UDim.new(0, 175);
+Tree["40"] = Instance.new("UIPadding", Tree["3f"]);
+Tree["40"]["PaddingTop"] = UDim.new(0, 175);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Dizzy
-G2L["47"] = Instance.new("TextButton", G2L["43"]);
-G2L["47"]["TextWrapped"] = true;
-G2L["47"]["BorderSizePixel"] = 0;
-G2L["47"]["TextSize"] = 14;
-G2L["47"]["TextColor3"] = Color3.fromRGB(107, 58, 255);
-G2L["47"]["TextScaled"] = true;
-G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["47"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["47"]["BackgroundTransparency"] = 1;
-G2L["47"]["Name"] = [[Dizzy]];
-G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["47"]["Text"] = [[discord.gg/ABCDEFG123]];
-G2L["47"]["Position"] = UDim2.new(0, 0, 0, 225);
+Tree["41"] = Instance.new("TextButton", Tree["3d"]);
+Tree["41"]["TextWrapped"] = true;
+Tree["41"]["BorderSizePixel"] = 0;
+Tree["41"]["TextSize"] = 14;
+Tree["41"]["TextColor3"] = Color3.fromRGB(107, 58, 255);
+Tree["41"]["TextScaled"] = true;
+Tree["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["41"]["Size"] = UDim2.new(1, 0, 1, 0);
+Tree["41"]["BackgroundTransparency"] = 1;
+Tree["41"]["Name"] = [[Dizzy]];
+Tree["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["41"]["Text"] = [[discord.gg/ABCDEFG123]];
+Tree["41"]["Position"] = UDim2.new(0, 0, 0, 225);
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Dizzy.LocalScript
-G2L["48"] = Instance.new("LocalScript", G2L["47"]);
+Tree["42"] = Instance.new("LocalScript", Tree["41"]);
 
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Ui
-G2L["49"] = Instance.new("TextLabel", G2L["42"]);
-G2L["49"]["TextWrapped"] = true;
-G2L["49"]["BorderSizePixel"] = 0;
-G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["49"]["TextSize"] = 24;
-G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["49"]["BackgroundTransparency"] = 1;
-G2L["49"]["RichText"] = true;
-G2L["49"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["Text"] = [[UI : 2FINE]];
-G2L["49"]["Name"] = [[Ui]];
+Tree["43"] = Instance.new("TextLabel", Tree["3c"]);
+Tree["43"]["TextWrapped"] = true;
+Tree["43"]["BorderSizePixel"] = 0;
+Tree["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["43"]["TextSize"] = 24;
+Tree["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Tree["43"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Tree["43"]["BackgroundTransparency"] = 1;
+Tree["43"]["RichText"] = true;
+Tree["43"]["Size"] = UDim2.new(1, 0, 1, 0);
+Tree["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["43"]["Text"] = [[UI : 2FINE]];
+Tree["43"]["Name"] = [[Ui]];
 
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Ui.UIPadding
-G2L["4a"] = Instance.new("UIPadding", G2L["49"]);
-G2L["4a"]["PaddingBottom"] = UDim.new(0, 150);
+Tree["44"] = Instance.new("UIPadding", Tree["43"]);
+Tree["44"]["PaddingBottom"] = UDim.new(0, 150);
 
 -- StarterGui.MyLibrary.Main.LocalScript
-G2L["4b"] = Instance.new("LocalScript", G2L["2"]);
+Tree["45"] = Instance.new("LocalScript", Tree["2"]);
 
+
+-- StarterGui.MyLibrary.Main.Navigation
+Tree["46"] = Instance.new("Frame", Tree["2"]);
+Tree["46"]["BorderSizePixel"] = 0;
+Tree["46"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+Tree["46"]["Size"] = UDim2.new(0, 70, 0, 202);
+Tree["46"]["Position"] = UDim2.new(-0.235, 0, 0.2475, 0);
+Tree["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["46"]["Name"] = [[Navigation]];
+
+-- StarterGui.MyLibrary.Main.Navigation.UICorner
+Tree["47"] = Instance.new("UICorner", Tree["46"]);
+Tree["47"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.MyLibrary.Main.Navigation.DropShadowHolder
+Tree["48"] = Instance.new("Frame", Tree["46"]);
+Tree["48"]["ZIndex"] = 0;
+Tree["48"]["BorderSizePixel"] = 0;
+Tree["48"]["Size"] = UDim2.new(1, 0, 1, 0);
+Tree["48"]["Name"] = [[DropShadowHolder]];
+Tree["48"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.MyLibrary.Main.Navigation.DropShadowHolder.DropShadow
+Tree["49"] = Instance.new("ImageLabel", Tree["48"]);
+Tree["49"]["ZIndex"] = 0;
+Tree["49"]["BorderSizePixel"] = 0;
+Tree["49"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
+Tree["49"]["ScaleType"] = Enum.ScaleType.Slice;
+Tree["49"]["ImageTransparency"] = 0.5;
+Tree["49"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["49"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Tree["49"]["Image"] = [[rbxassetid://6014261993]];
+Tree["49"]["Size"] = UDim2.new(1, 47, 1, 47);
+Tree["49"]["BackgroundTransparency"] = 1;
+Tree["49"]["Name"] = [[DropShadow]];
+Tree["49"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+-- StarterGui.MyLibrary.Main.Navigation.Aimbot
+Tree["4a"] = Instance.new("ImageButton", Tree["46"]);
+Tree["4a"]["BorderSizePixel"] = 0;
+Tree["4a"]["BackgroundColor3"] = Color3.fromRGB(0, 10, 64);
+Tree["4a"]["AnchorPoint"] = Vector2.new(0, 1);
+Tree["4a"]["Image"] = [[rbxassetid://10709781460]];
+Tree["4a"]["Size"] = UDim2.new(0, 40, 0, 40);
+Tree["4a"]["BackgroundTransparency"] = 1;
+Tree["4a"]["Name"] = [[Aimbot]];
+Tree["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["4a"]["Position"] = UDim2.new(0.20894, 0, 0.30813, 0);
 
 -- StarterGui.MyLibrary.Main.Navigation.Aimbot.ToggleAimbotTab
-local function C_f()
-local script = G2L["f"];
-	--// Variables
-	
-	local Aimbot = script.Parent.Parent.Parent.ContentContainer.AimbotTab
-	local Visuals = script.Parent.Parent.Parent.ContentContainer.VisualTab
-	local Credits = script.Parent.Parent.Parent.ContentContainer.CreditTab
-	local button = script.Parent
-	local sfx = script.Parent.Sound
-	
-	--// Actual Function
-	button.MouseButton1Click:Connect(function()
-		print("Button clicked!")
-		print("sfx:", sfx)
-		print("Aimbot:", Aimbot)
-		print("Visuals:", Visuals)
-		print("Credits:", Credits)
-		sfx.Volume = 0.5
-		sfx:Play()
-		Visuals.Visible = false
-		Credits.Visible = false
-		Aimbot.Visible = true
-		print("Code executed successfully!")
-	end)
-end;
-task.spawn(C_f);
+Tree["4b"] = Instance.new("LocalScript", Tree["4a"]);
+Tree["4b"]["Name"] = [[ToggleAimbotTab]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Aimbot.Sound
+Tree["4c"] = Instance.new("Sound", Tree["4a"]);
+Tree["4c"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+Tree["4c"]["SoundId"] = [[rbxassetid://7107162229]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Visuals
+Tree["4d"] = Instance.new("ImageButton", Tree["46"]);
+Tree["4d"]["BorderSizePixel"] = 0;
+Tree["4d"]["BackgroundColor3"] = Color3.fromRGB(0, 10, 64);
+Tree["4d"]["Image"] = [[rbxassetid://10747373426]];
+Tree["4d"]["Size"] = UDim2.new(0, 40, 0, 40);
+Tree["4d"]["BackgroundTransparency"] = 1;
+Tree["4d"]["Name"] = [[Visuals]];
+Tree["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["4d"]["Position"] = UDim2.new(0.20894, 0, 0.38733, 0);
+
 -- StarterGui.MyLibrary.Main.Navigation.Visuals.ToggleVisualsTab
-local function C_13()
-local script = G2L["13"];
-	--// Variables
-	
-	local Aimbot = script.Parent.Parent.Parent.ContentContainer.AimbotTab
-	local Visuals = script.Parent.Parent.Parent.ContentContainer.VisualTab
-	local Credits = script.Parent.Parent.Parent.ContentContainer.CreditTab
+Tree["4e"] = Instance.new("LocalScript", Tree["4d"]);
+Tree["4e"]["Name"] = [[ToggleVisualsTab]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Visuals.Sound
+Tree["4f"] = Instance.new("Sound", Tree["4d"]);
+Tree["4f"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+Tree["4f"]["SoundId"] = [[rbxassetid://7107162229]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Info
+Tree["50"] = Instance.new("ImageButton", Tree["46"]);
+Tree["50"]["BorderSizePixel"] = 0;
+Tree["50"]["BackgroundColor3"] = Color3.fromRGB(0, 10, 64);
+Tree["50"]["Image"] = [[rbxassetid://10723415903]];
+Tree["50"]["Size"] = UDim2.new(0, 40, 0, 40);
+Tree["50"]["BackgroundTransparency"] = 1;
+Tree["50"]["Name"] = [[Info]];
+Tree["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Tree["50"]["Position"] = UDim2.new(0.20894, 0, 0.68931, 0);
+
+-- StarterGui.MyLibrary.Main.Navigation.Info.ToggleCreditsTab
+Tree["51"] = Instance.new("LocalScript", Tree["50"]);
+Tree["51"]["Name"] = [[ToggleCreditsTab]];
+
+-- StarterGui.MyLibrary.Main.Navigation.Info.Sound
+Tree["52"] = Instance.new("Sound", Tree["50"]);
+Tree["52"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+Tree["52"]["SoundId"] = [[rbxassetid://7107162229]];
+
+-- StarterGui.MyLibrary.Main.Topbar.Title.LocalScript
+local function C_b()
+local script = Tree["b"];
+	local main = script.Parent.Parent
 	local button = script.Parent
-	local sfx = script.Parent.Sound
 	
-	--// Actual Function
-	button.MouseButton1Click:Connect(function()
-		print("Button clicked!")
-		print("sfx:", sfx)
-		print("Aimbot:", Aimbot)
-		print("Visuals:", Visuals)
-		print("Credits:", Credits)
-		sfx.Volume = 0.5
-		sfx:Play()
-		Visuals.Visible = true
-		Credits.Visible = false
-		Aimbot.Visible = false
-		print("Code executed successfully!")
-	end)
+	
+	button.Draggable = true
+	button.Active = true
+	
+	
+	if main.visible == true then
+		button.Visible = false
+		
+		
+		if main.Visible == false then
+			button.Visible = true
+			
+			button.MouseButton1Click:Connect(function()
+				main.Visible = true
+			end)
+		end
+	end
+	
 end;
-task.spawn(C_13);
--- StarterGui.MyLibrary.Main.Navigation.Credits.ToggleCreditsTab
-local function C_17()
-local script = G2L["17"];
-	--// Variables
-	
-	local Aimbot = script.Parent.Parent.Parent.ContentContainer.AimbotTab
-	local Visuals = script.Parent.Parent.Parent.ContentContainer.VisualTab
-	local Credits = script.Parent.Parent.Parent.ContentContainer.CreditTab
+task.spawn(C_b);
+-- StarterGui.MyLibrary.Main.Topbar.Minimize.LocalScript
+local function C_d()
+local script = Tree["d"];
 	local button = script.Parent
-	local sfx = script.Parent.Sound
+	local Maximize = script.Parent.Parent.Parent.Maximize
+	local main = script.Parent.Parent.Parent.Parent.Main
 	
-	--// Actual Function
 	button.MouseButton1Click:Connect(function()
-		print("Button clicked!")
-		print("sfx:", sfx)
-		print("Aimbot:", Aimbot)
-		print("Visuals:", Visuals)
-		print("Credits:", Credits)
-		sfx.Volume = 0.5
-		sfx:Play()
-		Visuals.Visible = false
-		Credits.Visible = true
-		Aimbot.Visible = false
-		print("Code executed successfully!")
+		main.Visible = false
+		
+		
+		
 	end)
+	
+	
 end;
-task.spawn(C_17);
+task.spawn(C_d);
 -- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.AimbotBtn.LocalScript
-local function C_22()
-local script = G2L["22"];
+local function C_16()
+local script = Tree["16"];
 	local sfx = script.Parent.Sound
 	local Button = script.Parent
+	
+	
+	local startSize = UDim2.new(0, 275,0.0075, 30)
+	local hoverSize = UDim2.new(0, 280,0.0085, 33)
+	
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent:TweenSize(hoverSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent:TweenSize(startSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		
@@ -890,12 +893,23 @@ local script = G2L["22"];
 		
 	end)
 end;
-task.spawn(C_22);
--- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.FOV.LocalScript
-local function C_29()
-local script = G2L["29"];
+task.spawn(C_16);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.Hitbox.LocalScript
+local function C_1d()
+local script = Tree["1d"];
 	local sfx = script.Parent.Sound
 	local Button = script.Parent
+	
+	local startSize = UDim2.new(0, 275,0.0075, 30)
+	local hoverSize = UDim2.new(0, 280,0.0085, 33)
+	
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent:TweenSize(hoverSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent:TweenSize(startSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		
@@ -1118,12 +1132,22 @@ local script = G2L["29"];
 		
 	end)
 end;
-task.spawn(C_29);
--- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.LocalScript
-local function C_32()
-local script = G2L["32"];
+task.spawn(C_1d);
+-- StarterGui.MyLibrary.Main.ContentContainer.AimbotTab.SilentAim.LocalScript
+local function C_24()
+local script = Tree["24"];
 	local sfx = script.Parent.Sound
 	local Button = script.Parent
+	local startSize = UDim2.new(0, 275,0.0075, 30)
+	local hoverSize = UDim2.new(0, 280,0.0085, 33)
+	
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent:TweenSize(hoverSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent:TweenSize(startSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		
@@ -1137,6 +1161,243 @@ local script = G2L["32"];
 		
 		---// Function below here ->
 		
+		--gg zacke runs u
+		--Made by Zacke
+	
+		getgenv().Prediction = 0.12466
+		getgenv().AimPart = "HumanoidRootPart"
+		getgenv().Key = "v"
+		getgenv().DisableKey = "P"
+	
+		getgenv().FOV = true
+		getgenv().ShowFOV = true
+		getgenv().FOVSize = 55
+	
+		--// Variables (Service)
+	
+		local Players = game:GetService("Players")
+		local RS = game:GetService("RunService")
+		local WS = game:GetService("Workspace")
+		local GS = game:GetService("GuiService")
+		local SG = game:GetService("StarterGui")
+	
+		--// Variables (regular)
+	
+		local LP = Players.LocalPlayer
+		local Mouse = LP:GetMouse()
+		local Camera = WS.CurrentCamera
+		local GetGuiInset = GS.GetGuiInset
+	
+		local AimlockState = true
+		local Locked
+		local Victim
+	
+		local SelectedKey = getgenv().Key
+		local SelectedDisableKey = getgenv().DisableKey
+	
+		--// Notification function
+	
+		function Notify(tx)
+			SG:SetCore("SendNotification", {
+				Title = "Zacke's lock",
+				Text = tx,
+				Duration = 5
+			})
+		end
+	
+		--// Check if aimlock is loaded
+	
+		if getgenv().Loaded == true then
+			Notify("u already injected dumbass - Zacke")
+			return
+		end
+	
+		getgenv().Loaded = true
+	
+		--// FOV Circle
+	
+		local fov = Drawing.new("Circle")
+		fov.Filled = false
+		fov.Transparency = 1
+		fov.Thickness = 1
+		fov.Color = Color3.fromRGB(255, 255, 0)
+		fov.NumSides = 1000
+	
+		--// Functions
+	
+		function update()
+			if getgenv().FOV == true then
+				if fov then
+					fov.Radius = getgenv().FOVSize * 2
+					fov.Visible = getgenv().ShowFOV
+					fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+	
+					return fov
+				end
+			end
+		end
+	
+		function WTVP(arg)
+			return Camera:WorldToViewportPoint(arg)
+		end
+	
+		function WTSP(arg)
+			return Camera.WorldToScreenPoint(Camera, arg)
+		end
+	
+		function getClosest()
+			local closestPlayer
+			local shortestDistance = math.huge
+	
+			for i, v in pairs(game.Players:GetPlayers()) do
+				local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+				local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+	
+				if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+					local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+					local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+	
+					if (getgenv().FOV) then
+						if (fov.Radius > magnitude and magnitude < shortestDistance) then
+							closestPlayer = v
+							shortestDistance = magnitude
+						end
+					else
+						if (magnitude < shortestDistance) then
+							closestPlayer = v
+							shortestDistance = magnitude
+						end
+					end
+				end
+			end
+			return closestPlayer
+		end
+	
+		--// Checks if key is down
+	
+		Mouse.KeyDown:Connect(function(k)
+			SelectedKey = SelectedKey:lower()
+			SelectedDisableKey = SelectedDisableKey:lower()
+			if k == SelectedKey then
+				if AimlockState == true then
+					Locked = not Locked
+					if Locked then
+						Victim = getClosest()
+	
+						Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+					else
+						if Victim ~= nil then
+							Victim = nil
+	
+							Notify("Unlocked!")
+						end
+					end
+				else
+					Notify("Aimlock is not enabled!")
+				end
+			end
+			if k == SelectedDisableKey then
+				AimlockState = not AimlockState
+			end
+		end)
+	
+		--// Loop update FOV and loop camera lock onto target
+	
+		RS.RenderStepped:Connect(function()
+			update()
+			if AimlockState == true then
+				if Victim ~= nil then
+					Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+				end
+			end
+		end)
+		while wait() do
+			if getgenv().AutoPrediction == true then
+				local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+				local split = string.split(pingvalue,'(')
+				local ping = tonumber(split[1])
+				if ping < 225 then
+					getgenv().Prediction = 1.4
+				elseif ping < 215 then
+					getgenv().Prediction = 1.2
+				elseif ping < 205 then
+					getgenv().Prediction = 1.0
+				elseif ping < 190 then
+					getgenv().Prediction = 0.10
+				elseif ping < 180 then
+					getgenv().Prediction = 0.12
+				elseif ping < 170 then
+					getgenv().Prediction = 0.15
+				elseif ping < 160 then
+					getgenv().Prediction = 0.18
+				elseif ping < 150 then
+					getgenv().Prediction = 0.110
+				elseif ping < 140 then
+					getgenv().Prediction = 0.113
+				elseif ping < 130 then
+					getgenv().Prediction = 0.116
+				elseif ping < 120 then
+					getgenv().Prediction = 0.120
+				elseif ping < 110 then
+					getgenv().Prediction = 0.124
+				elseif ping < 105 then
+					getgenv().Prediction = 0.127
+				elseif ping < 90 then
+					getgenv().Prediction = 0.130
+				elseif ping < 80 then
+					getgenv().Prediction = 0.133
+				elseif ping < 70 then
+					getgenv().Prediction = 0.136
+				elseif ping < 60 then
+					getgenv().Prediction = 0.15038
+				elseif ping < 50 then
+					getgenv().Prediction = 0.15038
+				elseif ping < 40 then
+					getgenv().Prediction = 0.145
+				elseif ping < 30 then
+					getgenv().Prediction = 0.155
+				elseif ping < 20 then
+					getgenv().Prediction = 0.157
+				end
+			end
+		end
+		
+		
+		
+		
+		
+		
+		
+	end)
+end;
+task.spawn(C_24);
+-- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Chams.LocalScript
+local function C_2c()
+local script = Tree["2c"];
+	local sfx = script.Parent.Sound
+	local Button = script.Parent
+	local startSize = UDim2.new(0, 275,0.0075, 30)
+	local hoverSize = UDim2.new(0, 280,0.0085, 33)
+	
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent:TweenSize(hoverSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent:TweenSize(startSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		sfx:Play()
+		-- Set the background color to a dark green
+		Button.BackgroundColor3 = Color3.fromRGB(0, 95, 11)
+	
+		-- Set the stroke color to a lighter green
+		Button.UIStroke.Color = Color3.fromRGB(0, 177, 18)
+		
+		
+		---// Function below here ->
 		
 		
 		local Players = game:GetService("Players"):GetChildren()
@@ -1186,12 +1447,22 @@ local script = G2L["32"];
 		end)
 	end)
 end;
-task.spawn(C_32);
+task.spawn(C_2c);
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Name ESP.LocalScript
-local function C_39()
-local script = G2L["39"];
+local function C_33()
+local script = Tree["33"];
 	local sfx = script.Parent.Sound
 	local Button = script.Parent
+	local startSize = UDim2.new(0, 275,0.0075, 30)
+	local hoverSize = UDim2.new(0, 280,0.0085, 33)
+	
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent:TweenSize(hoverSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent:TweenSize(startSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		
@@ -1219,12 +1490,7 @@ local script = G2L["39"];
 		local Find_Required = API_Check()
 	
 		if Find_Required == "No" then
-			game:GetService("StarterGui"):SetCore("SendNotification",{
-				Title = "Xanta ESP";
-				Text = "ESP could not be loaded because your executor is unsupported.";
-				Duration = math.huge;
-				Button1 = "OK"
-			})
+	
 	
 			return
 		end
@@ -1370,11 +1636,7 @@ local script = G2L["39"];
 				_G.ESPVisible = not _G.ESPVisible
 	
 				if _G.SendNotifications == true then
-					game:GetService("StarterGui"):SetCore("SendNotification",{
-						Title = "Xanta ESP";
-						Text = "visibility is now set to "..tostring(_G.ESPVisible)..".";
-						Duration = 5;
-					})
+	
 				end
 			end
 		end)
@@ -1385,23 +1647,13 @@ local script = G2L["39"];
 	
 		if Success and not Errored then
 			if _G.SendNotifications == true then
-				game:GetService("StarterGui"):SetCore("SendNotification",{
-					Title = "Xanta ESP";
-					Text = "successfully loaded.";
-					Duration = 5;
-				})
+	
 			end
 		elseif Errored and not Success then
 			if _G.SendNotifications == true then
-				game:GetService("StarterGui"):SetCore("SendNotification",{
-					Title = "Xanta ESP";
-					Text = "ESP has errored while loading check the developer console! ";
-					Duration = 5;
-				})
+	
 			end
-			TestService:Message("The ESP script has errored, please notify Exunys with the following information :")
 			warn(Errored)
-			print("!! IF THE ERROR IS A FALSE POSITIVE (says that a player cannot be found) THEN DO NOT BOTHER !!")
 		end
 		
 		
@@ -1409,12 +1661,22 @@ local script = G2L["39"];
 		
 	end)
 end;
-task.spawn(C_39);
+task.spawn(C_33);
 -- StarterGui.MyLibrary.Main.ContentContainer.VisualTab.Tracers.LocalScript
-local function C_40()
-local script = G2L["40"];
+local function C_3a()
+local script = Tree["3a"];
 	local sfx = script.Parent.Sound
 	local Button = script.Parent
+	local startSize = UDim2.new(0, 275,0.0075, 30)
+	local hoverSize = UDim2.new(0, 280,0.0085, 33)
+	
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent:TweenSize(hoverSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent:TweenSize(startSize,Enum.EasingDirection.Out,Enum.EasingStyle.Sine,.25,true)
+	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		
@@ -1441,12 +1703,7 @@ local script = G2L["40"];
 		local Find_Required = API_Check()
 	
 		if Find_Required == "No" then
-			game:GetService("StarterGui"):SetCore("SendNotification",{
-				Title = "Xanta Tracers";
-				Text = "Tracer could not be loaded because your executor is unsupported.";
-				Duration = math.huge;
-				Button1 = "OK"
-			})
+	
 	
 			return
 		end
@@ -1590,11 +1847,7 @@ local script = G2L["40"];
 					_G.FromMouse = false
 	
 					if _G.SendNotifications == true then
-						game:GetService("StarterGui"):SetCore("SendNotification",{
-							Title = "Exunys Developer";
-							Text = "Tracers will be now coming from the bottom of your screen (Mode 1)";
-							Duration = 5;
-						})
+	
 					end
 				elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true and _G.TracersVisible == true then
 					_G.FromCenter = true
@@ -1640,19 +1893,11 @@ local script = G2L["40"];
 	
 		if Success and not Errored then
 			if _G.SendNotifications == true then
-				game:GetService("StarterGui"):SetCore("SendNotification",{
-					Title = "Xanta Tracers";
-					Text = "successfully loaded.";
-					Duration = 5;
-				})
+	
 			end
 		elseif Errored and not Success then
 			if _G.SendNotifications == true then
-				game:GetService("StarterGui"):SetCore("SendNotification",{
-					Title = "Xanta Tracers";
-					Text = "Error Please check developer console! (F9) ";
-					Duration = 5;
-				})
+	
 			end
 		end
 	
@@ -1660,10 +1905,10 @@ local script = G2L["40"];
 		
 	end)
 end;
-task.spawn(C_40);
+task.spawn(C_3a);
 -- StarterGui.MyLibrary.Main.ContentContainer.CreditTab.Title.Dizzy.LocalScript
-local function C_48()
-local script = G2L["48"];
+local function C_42()
+local script = Tree["42"];
 	local TextButton = script.Parent
 	local text = "Text to be copied"
 	
@@ -1676,19 +1921,26 @@ local script = G2L["48"];
 		browser.Url = url
 	end)
 end;
-task.spawn(C_48);
+task.spawn(C_42);
 -- StarterGui.MyLibrary.Main.LocalScript
-local function C_4b()
-local script = G2L["4b"];
+local function C_45()
+local script = Tree["45"];
 	local main = script.Parent
 	local content = script.Parent.ContentContainer
 	local Navigation = script.Parent.Navigation
 	local topbar = script.Parent.Topbar
 	local shadow = script.Parent.DropShadowHolder
 	local textLabel = script.Parent.Topbar.Title
+	local gui = script.Parent.Parent
 	
 	
-	main.Visible = true
+	
+	--// gui stuff
+	gui.ResetOnSpawn = false
+	gui.Enabled = true
+	
+	--// frame stuff
+	main.Visible = false
 	content.Visible = false
 	Navigation.Visible = false
 	topbar.Visible = false
@@ -1697,12 +1949,13 @@ local script = G2L["4b"];
 	
 	
 	wait(1.5)
-	
+	main.Visible = true
 	
 	for i = 1, 20 do
 		main.Transparency = 1 - (i - 1) / 20
 		wait(0.05)
 	end
+	main.Transparency = 0
 	
 	wait(.5)
 	
@@ -1715,7 +1968,7 @@ local script = G2L["4b"];
 	
 	
 	game:GetService("StarterGui"):SetCore("SendNotification",{
-		Title = "Xanta";
+		Title = "Ketaware";
 		Text = "Succesfully Loaded, Have a nice day!";
 		Duration = 5;
 	})
@@ -1729,7 +1982,7 @@ local script = G2L["4b"];
 	end
 	
 	-- Call the typewrite function with the desired text
-	typewrite(nil, "Xanta")
+	typewrite(nil, "Ketaware")
 	
 	main.Draggable = true
 	main.Selectable = true
@@ -1738,8 +1991,91 @@ local script = G2L["4b"];
 	
 	wait(1)
 	
-	print("Xanta Loaded Succesfully!")
+	print("Ketaware Loaded Succesfully!")
+end;
+task.spawn(C_45);
+-- StarterGui.MyLibrary.Main.Navigation.Aimbot.ToggleAimbotTab
+local function C_4b()
+local script = Tree["4b"];
+	--// Variables
+	
+	local Aimbot = script.Parent.Parent.Parent.ContentContainer.AimbotTab
+	local Visuals = script.Parent.Parent.Parent.ContentContainer.VisualTab
+	local Credits = script.Parent.Parent.Parent.ContentContainer.CreditTab
+	local button = script.Parent
+	local sfx = script.Parent.Sound
+	
+	--// Actual Function
+	button.MouseButton1Click:Connect(function()
+		print("Button clicked!")
+		print("sfx:", sfx)
+		print("Aimbot:", Aimbot)
+		print("Visuals:", Visuals)
+		print("Credits:", Credits)
+		sfx.Volume = 0.5
+		sfx:Play()
+		Visuals.Visible = false
+		Credits.Visible = false
+		Aimbot.Visible = true
+		print("Code executed successfully!")
+	end)
 end;
 task.spawn(C_4b);
+-- StarterGui.MyLibrary.Main.Navigation.Visuals.ToggleVisualsTab
+local function C_4e()
+local script = Tree["4e"];
+	--// Variables
+	
+	local Aimbot = script.Parent.Parent.Parent.ContentContainer.AimbotTab
+	local Visuals = script.Parent.Parent.Parent.ContentContainer.VisualTab
+	local Credits = script.Parent.Parent.Parent.ContentContainer.CreditTab
+	local button = script.Parent
+	local sfx = script.Parent.Sound
+	
+	
+	--// Actual Function
+	button.MouseButton1Click:Connect(function()
+		print("Button clicked!")
+		print("sfx:", sfx)
+		print("Aimbot:", Aimbot)
+		print("Visuals:", Visuals)
+		print("Credits:", Credits)
+		sfx.Volume = 0.5
+		sfx:Play()
+		Visuals.Visible = true
+		Credits.Visible = false
+		Aimbot.Visible = false
+		print("Code executed successfully!")
+	end)
+end;
+task.spawn(C_4e);
+-- StarterGui.MyLibrary.Main.Navigation.Info.ToggleCreditsTab
+local function C_51()
+local script = Tree["51"];
+	--// Variables
+	
+	local Aimbot = script.Parent.Parent.Parent.ContentContainer.AimbotTab
+	local Visuals = script.Parent.Parent.Parent.ContentContainer.VisualTab
+	local Credits = script.Parent.Parent.Parent.ContentContainer.CreditTab
+	local button = script.Parent
+	local sfx = script.Parent.Sound
+	
+	
+	--// Actual Function
+	button.MouseButton1Click:Connect(function()
+		print("Button clicked!")
+		print("sfx:", sfx)
+		print("Aimbot:", Aimbot)
+		print("Visuals:", Visuals)
+		print("Credits:", Credits)
+		sfx.Volume = 0.5
+		sfx:Play()
+		Visuals.Visible = false
+		Credits.Visible = true
+		Aimbot.Visible = false
+		print("Code executed successfully!")
+	end)
+end;
+task.spawn(C_51);
 
-return G2L["1"], require;
+return Tree["1"], require;
